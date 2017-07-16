@@ -57,6 +57,20 @@ If you haven't yet noticed, HTML tags are composed hierarchically. With our curr
 </html>
 ```
 
+Now that we have a section to hold the code we can actually see, we can now start adding visual elements to the page. The first thing we should do is tell the user what they are looking at. We can accomplish this by using elements called headings. This is not to be confused with the head elements. One is for the anatomy of the HTML document itself, and the other is for a visual component within the body of the document.
+
+We will add a heading to our page telling the user the page will contain our quizzer tool. Heading tags are defined as `<h1>`. Did you notice the number after the letter? HTML has headings numbered up to 6 to indicate priority. Try to experiment with headings in your editor space to see what each does:
+
+```html
+<h1>This is a heading 1</h1>
+<h2>This is a heading 2</h2>
+<h3>This is a heading 3</h3>
+<h4>This is a heading 4</h4>
+<h5>This is a heading 5</h5>
+<h6>This is a heading 6</h6>
+```
+
+
 Comments:
 A quick note -- did you notice the line of text inside the `<html>` tags? This is called a "comment". Comments are pieces of code that is there for reference purposes, and is not seen on the user side or deciphered by the interpreter. These are usually used for informing other people looking at the code something the programmer thought was important or worth noting. In HTML, we define a comment with: less-than sign, an exclamation mark, 2 hyphens, and is closed off with 2 hyphens and a greater-than sign. Like HTML tags, these are how comment tags are defined.
 

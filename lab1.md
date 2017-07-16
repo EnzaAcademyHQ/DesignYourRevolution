@@ -43,6 +43,7 @@ The next tags we will add for the tool we are building are <body> tags. The body
   
 If you haven't yet noticed, HTML tags are composed hierarchically. With our current code, we see that we have master <html> tags, a child <head> tag, which has a child <title> tag of its own. That being said, <head> and <body> are siblings -- where do you think this means the <body> tags are placed? Because they are siblings, <head> and <body> tags are hierchically on the same level. However, the <head> tags are always defined before the <body> tags. Let's add our <body> tags to our code:
 <code>
+<pre>
 <html>
   <head>
     <title>Mikos's Awesome Quizzer Tool</title>
@@ -50,6 +51,7 @@ If you haven't yet noticed, HTML tags are composed hierarchically. With our curr
   <body>
   </body>
 </html>
+</pre>
 </code>
 
 Comments:

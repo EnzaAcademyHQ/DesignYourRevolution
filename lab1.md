@@ -1,7 +1,5 @@
 ---
-theme: jekyll-theme-cayman
 title: Lab 1: STEM with Enza Academy
-layout: post
 ---
 
 Lab 1

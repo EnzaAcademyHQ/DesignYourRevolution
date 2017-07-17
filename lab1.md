@@ -6,7 +6,9 @@ title: Lab 1: STEM with Enza Academy
 Introduction:
 Today we will be reviewing basic concepts in HTML. We will dissect the components of an HTML page, discussing different elements & tags.
 
-HTML pages are complete documents comprised of components called "elements". Every HTML page has elements. Think of it this way: in chemistry, matter is composed of core elements. Every piece of matter contain elements from the same base elements found in the periodic table. You can view web page elements as exhibiting the same functionality.
+HTML pages are documents comprised of components called "elements". Every HTML page has elements. 
+
+Think of it this way: in chemistry, matter is composed of core elements. Every piece of matter contains elements from the same base elements found in the periodic table. You can view web page elements as exhibiting the same functionality.
 
 Just as every element on the periodic table has properties that make them unique, the same can be said about HTML elements. 
 
@@ -19,13 +21,38 @@ Every HTML page has encapsulating tags; meaning that the tag begins, content is 
 
 Notice the similarities and differences between the opening and closing tags? They are exactly the same with the exception of an extra "/" after the closing tag's less-than(<) sign.
 
+Before we continue to the next step, it is a good idea for you, the developer, to know exactly what is happening in the code. Developers do this by adding comments to their code. Comments are pieces of code that are there for reference purposes, and are not seen on the user side or executed. These are usually used for informing other developers looking at the code of something the original developer thought was important to indicate. They can also be helpful for you to use if you step away from your code for a good length of time and return to it.
+
+In HTML, we define a comment with: less-than sign(<), an exclamation mark(!), 2 hyphens(--), and is closed off with 2 hyphens(--) and a greater-than sign(>):
+```html
+<!-- This is a comment. -->
+```
+Let's practice creating comments in our editor:
+```html
+<!-- This is a comment. -->
+<!-- I will add code here. -->
+<!-- This page will soon have a quizzer tool on it. -->
+```
+
+From here on, we will be adding comments before each new line we create. Our HTML comments will be in the format of "I will be adding a __[tag name]__ tag here." This is to know exactly what we are doing every step of the way.
+
+Go back and add a comment to your HTML page:
+```html
+<html>
+<!-- I will be adding HTML elements here. -->
+</html>
+```
+
 Every part of the HTML page's content is enclosed within some nested tag of the HTML document. Because of this, when we add more content to the page, we must use the proper tags for the content we're adding. 
 
 The next section of the HTML document is the `<head></head>` tags. Content within these tags contain identifying information about the document, such as titles, descriptions, and other types of data. This information is NOT seen on the user's end, but tools such as search engines and web crawlers use it to properly understand the document. For example, when you see a page in Google results, there is usually a title and description. This is simply the information that was defined in the document's title and description tags.
 
-We will now add `<head>` tags to our working document. Our document should now look like:
+We will now add `<head>` tags(with comments!) to our working document. Ensure your comments match indentation of the line in which you are commenting about. Remember that this will be nested between our `<html>` tags. Every time we nest an element, we should make our code easier to read and see the nested effects. This is done by indenting 4 spaces for each nested level. However, most code editors use the "Tab" key as a shortcut to do this. Our document should now look like:
 ```html
 <html>
+<!-- I will be adding HTML elements here. -->
+
+  <!-- I will be adding a head tag. -->
   <head></head>
 </html>
 ```
@@ -35,7 +62,12 @@ Let's add our first piece of data to this page, which is the title. As you may h
 This gives us:
 ```html
 <html>
+<!-- I will be adding HTML elements here. -->
+
+  <!-- I will be adding a head tag. -->
   <head>
+  
+    <!-- I will be adding a title tag. -->
     <title>Mikos's Awesome Quizzer Tool</title>
   </head>
 </html>
@@ -49,9 +81,16 @@ If you haven't yet noticed, HTML tags are composed hierarchically. With our curr
 
 ```html
 <html>
+<!-- I will be adding HTML elements here. -->
+
+  <!-- I will be adding a head tag. -->
   <head>
+  
+    <!-- I will be adding a title tag. -->
     <title>Mikos's Awesome Quizzer Tool</title>
   </head>
+  
+  <!-- I will be adding a body tag. -->
   <body>
   </body>
 </html>
@@ -77,10 +116,19 @@ You do not need to keep the experimental code -- the purpose was to demonstrate 
 We have added our first piece of data the user can see. We are now at:
 ```html
 <html>
+<!-- I will be adding HTML elements here. -->
+
+  <!-- I will be adding a head tag. -->
   <head>
+  
+    <!-- I will be adding a title tag. -->
     <title>Mikos's Awesome Quizzer Tool</title>
   </head>
+  
+  <!-- I will be adding a body tag. -->
   <body>
+  
+    <!-- I will be adding an h1 tag. -->
     <h1>Mikos's Awesome Quizzer Tool</h1>
   </body>
 </html>
@@ -107,12 +155,25 @@ If there is a main section in which the quiz-related content goes, and because t
 Add this nested div section to your working code and it should appear as:
 ```html
 <html>
+<!-- I will be adding HTML elements here. -->
+
+  <!-- I will be adding a head tag. -->
   <head>
+  
+    <!-- I will be adding a title tag. -->
     <title>Mikos's Awesome Quizzer Tool</title>
   </head>
+  
+  <!-- I will be adding a body tag. -->
   <body>
+  
+    <!-- I will be adding an h1 tag. -->
     <h1>Mikos's Awesome Quizzer Tool</h1>
+    
+    <!-- I will be adding a div tag for the quiz. -->
     <div>
+    
+      <!-- I will be adding a div tag for quiz result feedback. -->
       <div></div>
     </div>
   </body>
@@ -131,12 +192,25 @@ We can do this by adding a property to the div elements themselves. This is done
 Now that we know how to add identifiers, let's add them to our ambiguous `<div>` tags to get:
 ```html
 <html>
+<!-- I will be adding HTML elements here. -->
+
+  <!-- I will be adding a head tag. -->
   <head>
+  
+    <!-- I will be adding a title tag. -->
     <title>Mikos's Awesome Quizzer Tool</title>
   </head>
+  
+  <!-- I will be adding a body tag. -->
   <body>
+  
+    <!-- I will be adding an h1 tag. -->
     <h1>Mikos's Awesome Quizzer Tool</h1>
+    
+    <!-- I will be adding a div tag for the quiz. -->
     <div id="main_quiz_section">
+    
+      <!-- I will be adding a div tag for quiz result feedback. -->
       <div id="quiz_result_feedback_section"></div>
     </div>
   </body>
@@ -155,13 +229,28 @@ When you take a quiz, you will likely scroll to the bottom of the question list 
 Let's insert our `<form>` element before our feedback section:
 ```html
 <html>
+<!-- I will be adding HTML elements here. -->
+
+  <!-- I will be adding a head tag. -->
   <head>
+  
+    <!-- I will be adding a title tag. -->
     <title>Mikos's Awesome Quizzer Tool</title>
   </head>
+  
+  <!-- I will be adding a body tag. -->
   <body>
+  
+    <!-- I will be adding an h1 tag. -->
     <h1>Mikos's Awesome Quizzer Tool</h1>
+    
+    <!-- I will be adding a div tag for the quiz. -->
     <div id="main_quiz_section">
+    
+      <!-- I will be adding a form tag. -->
       <form></form>
+      
+      <!-- I will be adding a div tag for quiz result feedback. -->
       <div id="quiz_result_feedback_section"></div>
     </div>
   </body>
@@ -171,13 +260,28 @@ Let's insert our `<form>` element before our feedback section:
 We will add an id property to our form so that we can identify its purpose:
 ```html
 <html>
+<!-- I will be adding HTML elements here. -->
+
+  <!-- I will be adding a head tag. -->
   <head>
+  
+    <!-- I will be adding a title tag. -->
     <title>Mikos's Awesome Quizzer Tool</title>
   </head>
+  
+  <!-- I will be adding a body tag. -->
   <body>
+  
+    <!-- I will be adding an h1 tag. -->
     <h1>Mikos's Awesome Quizzer Tool</h1>
+    
+    <!-- I will be adding a div tag for the quiz. -->
     <div id="main_quiz_section">
+    
+      <!-- I will be adding a form tag. -->
       <form id="questions_form"></form>
+      
+      <!-- I will be adding a div tag for quiz result feedback. -->
       <div id="quiz_result_feedback_section"></div>
     </div>
   </body>
@@ -185,28 +289,49 @@ We will add an id property to our form so that we can identify its purpose:
 ```
 
 Our last step for today will be adding the button to start the quiz. First, let's experiment with the way a button works by creating a couple of buttons:
+
 ```html
 <button>Test Button 1</button>
 <button>Test Button 2</button>
 <button>Test Button 3</button>
 <button>Test Button 4</button>
 ```
+
 Now that we see how simple it is to create buttons, we are ready to add one to our code. Where should this button go? Because the button to start the quiz cannot be a part of the quiz itself, we will place it outside of the main quiz section:
+
 ```html
 <html>
+<!-- I will be adding HTML elements here. -->
+
+  <!-- I will be adding a head tag. -->
   <head>
+  
+    <!-- I will be adding a title tag. -->
     <title>Mikos's Awesome Quizzer Tool</title>
   </head>
+  
+  <!-- I will be adding a body tag. -->
   <body>
+  
+    <!-- I will be adding an h1 tag. -->
     <h1>Mikos's Awesome Quizzer Tool</h1>
+    
+    <!-- I will be adding a div tag for the quiz. -->
     <div id="main_quiz_section">
+    
+      <!-- I will be adding a form tag. -->
       <form id="questions_form"></form>
+      
+      <!-- I will be adding a div tag for quiz result feedback. -->
       <div id="quiz_result_feedback_section"></div>
     </div>
+    
+    <!-- I will be adding a button. -->
     <button>Start Quiz</button>
   </body>
 </html>
 ```
+
 Voila! You have a basic skeleton of an HTML page with a heading, div sections, a form, and a button. This is all you need to house the quizzer on the HTML side. We will learn more about adding functionality to the button and introducing another language, JavaScript, to you in the next lab.
 
 Feel free to Google concepts that you either you are having trouble with, or desire to learn more information about. Instructor contact information can be found at the bottom of the lab for one-on-one questions.
@@ -216,4 +341,3 @@ Mr. Jenkins: mjenkins@enzaacademy.org
 Mr. Kyei: kkyei@enzaacademy.org
 Mr. Kibret: nkibret@enzaacademy.org
 Mr. Cudjoe: rcudjoe@enzaacademy.org
-

@@ -337,7 +337,12 @@ Now that we see how simple it is to create buttons, we are ready to add one to o
 
 Voila! You have a basic skeleton of an HTML page with a heading, div sections, a form, and a button. This is all you need to house the quizzer on the HTML side. We will learn more about adding functionality to the button and introducing another language, JavaScript, to you in the next lab.
 
-Feel free to Google concepts that you either you are having trouble with, or desire to learn more information about. Instructor contact information can be found at the bottom of the lab for one-on-one questions.
+Feel free to Google concepts that you either you are having trouble with, or desire to learn more information about. A great website to use to learn more about the topics discussed in class:<br>
+**https://www.w3schools.com/**
+Simply go here, search a specific topic, and you'll find detailed exmplanations and examples of all the topics that were discussed today.
+
+
+Instructor contact information can be found at the bottom of the lab for one-on-one questions.
 
 Enza Instructors:
 <ul>

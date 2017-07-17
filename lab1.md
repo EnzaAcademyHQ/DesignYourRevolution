@@ -87,12 +87,111 @@ We have added our first piece of data the user can see. We are now at:
 ```
 The next thing we want to do is divide our HTML document into sections. First let's think about the sections we will need for our page:
 <ul>
-<li>A section for our quiz</li>
+<li>A main section for our quiz</li>
 <li>A section for quiz feedback to display to the test-taker</li>
 </ul>
 
 How should we create these divisions in HTML? If you haven't guessed it yet, we have division tags for that:
 `<div></div>`
+
+We established earlier that we need 2 divisions for the page, meaning we will be creating 2 sets of div tags. Before we create the tags, let's make sense of where they should go. 
+
+If there is a main section in which the quiz-related content goes, and because the feedback is quiz-related, feedback should be within the main section. One set of div tags should be nested within the other:
+
+```html
+<div>
+  <div></div>
+</div>
+```
+
+Add this nested div section to your working code and it should appear as:
+```html
+<html>
+  <head>
+    <title>Mikos's Awesome Quizzer Tool</title>
+  </head>
+  <body>
+    <h1>Mikos's Awesome Quizzer Tool</h1>
+    <div>
+      <div></div>
+    </div>
+  </body>
+</html>
+```
+
+That makes sense, right? Sure, but the only problem is identifying which div is for what. This might not be a problem to leave it as is initially, but what if we want to specifically manipulate the feedback division without manipulating the main quiz division? We need a way to identify these divisions.
+
+We can do this by adding a property to the div elements themselves. This is done by defining the identifier(id) on the opening div tag itself:
+```html
+<div id="our_unique_identifier">
+
+</div>
+```
+
+Now that we know how to add identifiers, let's add them to our ambiguous `<div>` tags to get:
+```html
+<html>
+  <head>
+    <title>Mikos's Awesome Quizzer Tool</title>
+  </head>
+  <body>
+    <h1>Mikos's Awesome Quizzer Tool</h1>
+    <div id="main_quiz_section">
+      <div id="quiz_result_feedback_section"></div>
+    </div>
+  </body>
+</html>
+```
+
+We are almost done with our core HTML page, with only 2 items missing from our initial quizzer tool: a form for our questions, and a button to start the quizzer. 
+
+Yes, HTML has elements for forms and buttons! They follow the same convention as the other tags we've learned:
+`<form>` and `<button>` respectively. 
+
+We are using a form because the quiz is simply a form full of questions to be submitted. Where should the <form> go might you ask? We know it goes somewhere within the main quiz section, but should it go before or after the feedback?
+
+When you take a quiz, you will likely scroll to the bottom of the question list to submit your answers -- therefore it makes sense to place the form before the feedback section. This way, you will see the results feedback at the end of the quiz after it is submitted.
+
+Let's insert our `<form>` element before our feedback section:
+```html
+<html>
+  <head>
+    <title>Mikos's Awesome Quizzer Tool</title>
+  </head>
+  <body>
+    <h1>Mikos's Awesome Quizzer Tool</h1>
+    <div id="main_quiz_section">
+      <form></form>
+      <div id="quiz_result_feedback_section"></div>
+    </div>
+  </body>
+</html>
+```
+
+We will add an id property to our form so that we can identify its purpose:
+```html
+<html>
+  <head>
+    <title>Mikos's Awesome Quizzer Tool</title>
+  </head>
+  <body>
+    <h1>Mikos's Awesome Quizzer Tool</h1>
+    <div id="main_quiz_section">
+      <form id="questions_form"></form>
+      <div id="quiz_result_feedback_section"></div>
+    </div>
+  </body>
+</html>
+```
+
+Our last step for today will be adding the button to start the quiz. First, let's experiment with the way a button works by creating a couple of buttons:
+```html
+<button>Test Button 1</button>
+<button>Test Button 2</button>
+<button>Test Button 3</button>
+<button>Test Button 4</button>
+```
+Now that we see how simple it is to create buttons, we are ready to add one to our code.
 
 Comments:
 A quick note -- did you notice the line of text inside the `<html>` tags? This is called a "comment". Comments are pieces of code that is there for reference purposes, and is not seen on the user side or deciphered by the interpreter. These are usually used for informing other people looking at the code something the programmer thought was important or worth noting. In HTML, we define a comment with: less-than sign, an exclamation mark, 2 hyphens, and is closed off with 2 hyphens and a greater-than sign. Like HTML tags, these are how comment tags are defined.

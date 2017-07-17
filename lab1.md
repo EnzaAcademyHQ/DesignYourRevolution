@@ -34,7 +34,7 @@ Let's practice creating comments in our editor:
 <!-- This page will soon have a quizzer tool on it. -->
 ```
 
-From here on, we will be adding comments before each new line we create. Our HTML comments will be in the format of "I will be adding a __[tag name]__ tag here." This is to know exactly what we are doing every step of the way.
+From here on, we will be adding comments before each new line we create. Our HTML comments will be in the formats of "I will be adding a __[tag name]__ tag here." and "I will be adding a __[tag name]__ tag for __[tag's purpose]__.", whichever makes more sense for the line being commented about. This is to know exactly what we are doing every step of the way.
 
 Go back and add a comment to your HTML page:
 ```html
@@ -128,7 +128,7 @@ We have added our first piece of data the user can see. We are now at:
   <!-- I will be adding a body tag. -->
   <body>
   
-    <!-- I will be adding an h1 tag. -->
+    <!-- I will be adding an h1 tag for my quizzer's heading. -->
     <h1>Mikos's Awesome Quizzer Tool</h1>
   </body>
 </html>
@@ -167,10 +167,10 @@ Add this nested div section to your working code and it should appear as:
   <!-- I will be adding a body tag. -->
   <body>
   
-    <!-- I will be adding an h1 tag. -->
+    <!-- I will be adding an h1 tag for my quizzer's heading. -->
     <h1>Mikos's Awesome Quizzer Tool</h1>
     
-    <!-- I will be adding a div tag for the quiz. -->
+    <!-- I will be adding a div tag for the main quiz section. -->
     <div>
     
       <!-- I will be adding a div tag for quiz result feedback. -->
@@ -204,10 +204,10 @@ Now that we know how to add identifiers, let's add them to our ambiguous `<div>`
   <!-- I will be adding a body tag. -->
   <body>
   
-    <!-- I will be adding an h1 tag. -->
+    <!-- I will be adding an h1 tag for my quizzer's heading. -->
     <h1>Mikos's Awesome Quizzer Tool</h1>
     
-    <!-- I will be adding a div tag for the quiz. -->
+    <!-- I will be adding a div tag for the main quiz section. -->
     <div id="main_quiz_section">
     
       <!-- I will be adding a div tag for quiz result feedback. -->
@@ -241,13 +241,13 @@ Let's insert our `<form>` element before our feedback section:
   <!-- I will be adding a body tag. -->
   <body>
   
-    <!-- I will be adding an h1 tag. -->
+    <!-- I will be adding an h1 tag for my quizzer's heading. -->
     <h1>Mikos's Awesome Quizzer Tool</h1>
     
-    <!-- I will be adding a div tag for the quiz. -->
+    <!-- I will be adding a div tag for the main quiz section. -->
     <div id="main_quiz_section">
     
-      <!-- I will be adding a form tag. -->
+      <!-- I will be adding a form tag for quiz questions. -->
       <form></form>
       
       <!-- I will be adding a div tag for quiz result feedback. -->
@@ -272,13 +272,13 @@ We will add an id property to our form so that we can identify its purpose:
   <!-- I will be adding a body tag. -->
   <body>
   
-    <!-- I will be adding an h1 tag. -->
+    <!-- I will be adding an h1 tag for my quizzer's heading. -->
     <h1>Mikos's Awesome Quizzer Tool</h1>
     
-    <!-- I will be adding a div tag for the quiz. -->
+    <!-- I will be adding a div tag for the main quiz section. -->
     <div id="main_quiz_section">
     
-      <!-- I will be adding a form tag. -->
+      <!-- I will be adding a form tag for quiz questions. -->
       <form id="questions_form"></form>
       
       <!-- I will be adding a div tag for quiz result feedback. -->
@@ -313,20 +313,20 @@ Now that we see how simple it is to create buttons, we are ready to add one to o
   <!-- I will be adding a body tag. -->
   <body>
   
-    <!-- I will be adding an h1 tag. -->
+    <!-- I will be adding an h1 tag for my quizzer's heading. -->
     <h1>Mikos's Awesome Quizzer Tool</h1>
     
-    <!-- I will be adding a div tag for the quiz. -->
+    <!-- I will be adding a div tag for the main quiz section. -->
     <div id="main_quiz_section">
     
-      <!-- I will be adding a form tag. -->
+      <!-- I will be adding a form tag for quiz questions. -->
       <form id="questions_form"></form>
       
       <!-- I will be adding a div tag for quiz result feedback. -->
       <div id="quiz_result_feedback_section"></div>
     </div>
     
-    <!-- I will be adding a button. -->
+    <!-- I will be adding a button to start the quiz. -->
     <button>Start Quiz</button>
   </body>
 </html>

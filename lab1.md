@@ -3,8 +3,11 @@ title: Lab 1: STEM with Enza Academy
 ---
 ## Lab 1
 
-Introduction:
-Today we will be reviewing basic concepts in HTML. We will dissect the components of an HTML page, discussing different elements & tags.
+**Introduction:
+Today we will be reviewing basic concepts in HTML. We will dissect the components of an HTML page, discussing different elements & tags.**
+
+Office hours for 7/17:
+6:30p-7:30p, Room 328
 
 HTML pages are documents comprised of components called "elements". Every HTML page has elements. 
 

@@ -339,6 +339,7 @@ Voila! You have a basic skeleton of an HTML page with a heading, div sections, a
 
 Feel free to Google concepts that you either you are having trouble with, or desire to learn more information about. A great website to use to learn more about the topics discussed in class:<br>
 **https://www.w3schools.com/**
+<br>
 Simply go here, search a specific topic, and you'll find detailed exmplanations and examples of all the topics that were discussed today.
 
 

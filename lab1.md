@@ -191,8 +191,29 @@ Our last step for today will be adding the button to start the quiz. First, let'
 <button>Test Button 3</button>
 <button>Test Button 4</button>
 ```
-Now that we see how simple it is to create buttons, we are ready to add one to our code.
+Now that we see how simple it is to create buttons, we are ready to add one to our code. Where should this button go? Because the button to start the quiz cannot be a part of the quiz itself, we will place it outside of the main quiz section:
+```html
+<html>
+  <head>
+    <title>Mikos's Awesome Quizzer Tool</title>
+  </head>
+  <body>
+    <h1>Mikos's Awesome Quizzer Tool</h1>
+    <div id="main_quiz_section">
+      <form id="questions_form"></form>
+      <div id="quiz_result_feedback_section"></div>
+    </div>
+    <button>Start Quiz</button>
+  </body>
+</html>
+```
+Voila! You have a basic skeleton of an HTML page with a heading, div sections, a form, and a button. This is all you need to house the quizzer on the HTML side. We will learn more about adding functionality to the button and introducing another language, JavaScript, to you in the next lab.
 
-Comments:
-A quick note -- did you notice the line of text inside the `<html>` tags? This is called a "comment". Comments are pieces of code that is there for reference purposes, and is not seen on the user side or deciphered by the interpreter. These are usually used for informing other people looking at the code something the programmer thought was important or worth noting. In HTML, we define a comment with: less-than sign, an exclamation mark, 2 hyphens, and is closed off with 2 hyphens and a greater-than sign. Like HTML tags, these are how comment tags are defined.
+Feel free to Google concepts that you either you are having trouble with, or desire to learn more information about. Instructor contact information can be found at the bottom of the lab for one-on-one questions.
+
+Enza Instructors:
+Mr. Jenkins: mjenkins@enzaacademy.org
+Mr. Kyei: kkyei@enzaacademy.org
+Mr. Kibret: nkibret@enzaacademy.org
+Mr. Cudjoe: rcudjoe@enzaacademy.org
 

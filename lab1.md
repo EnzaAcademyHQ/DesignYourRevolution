@@ -337,7 +337,9 @@ Voila! You have a basic skeleton of an HTML page with a heading, div sections, a
 Feel free to Google concepts that you either you are having trouble with, or desire to learn more information about. Instructor contact information can be found at the bottom of the lab for one-on-one questions.
 
 Enza Instructors:
-Mr. Jenkins: mjenkins@enzaacademy.org
-Mr. Kyei: kkyei@enzaacademy.org
-Mr. Kibret: nkibret@enzaacademy.org
-Mr. Cudjoe: rcudjoe@enzaacademy.org
+<ul>
+<li>Mr. Jenkins: mjenkins@enzaacademy.org</li>
+<li>Mr. Kyei: kkyei@enzaacademy.org</li>
+<li>Mr. Kibret: nkibret@enzaacademy.org</li>
+<li>Mr. Cudjoe: rcudjoe@enzaacademy.org</li>
+</ul>

@@ -78,8 +78,10 @@ See what happened? We set the value of document.getElementById("main_quiz_area")
 
 Now that we know how to edit inner HTMl of elements, we will hold off on manually inputting our quiz questions into the form, and let our JavaScript code do that for us. Yes, your code can write code for you!
 
-
-
+Because all we completed were exercises for basic understanding of the code, the only thing that should be in you JavaScript file is:
+```javascript
+var main_quiz_area_div = document.getElementById("main_quiz_area");
+```
 Voila! You now know JavaScript basics, including variables, getting/referencing HTML elements, and adding HTML to it. This is all you need to house the quizzer on the HTML side. We will learn more about adding functionality to the button and introducing another language, JavaScript, to you in the next lab.
 
 Feel free to Google concepts that you either you are having trouble with, or desire to learn more information about. A great website to use to learn more about the topics discussed in class:<br>

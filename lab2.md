@@ -84,7 +84,7 @@ var main_quiz_area_div = document.getElementById("main_quiz_area");
 ```
 
 
-EXTRA:
+<h2>EXTRA:</h2>
 
 If you were able to understand everything in this lab thoroughly, we can cover 2 more concepts needed for your quizzer application in this lab: objects and arrays(lists).
 

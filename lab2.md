@@ -22,7 +22,7 @@ var me = "Mikos";
 
 In that example, we created a variable called "me", with a value of "Mikos". Notice the semicolon at the end? All JavaScript statements must end with a semicolon. Unlike HTML, if JavaScript statements aren't closed off, it will return an error and break the program. A broken program cannot run.
 
-The standard practice to test variables is using the JavaScript console. The console is simply a window that usually displays errors, but can also be used to code JavaScript.
+The standard practice to test variables is using the JavaScript console. The console is simply a window that usually displays errors, but can also be used to code JavaScript. In CodePen, there is a button at the bottom-left side of the screen that reads "Console". Clicking this button will bring up another window, and you will be able to see the code sent to the console there.
 
 To test code, we simply type: 
 ```javascript
@@ -47,7 +47,7 @@ console.log(home_state);
 console.log(school_name);
 ```
 
-Now that you know how to set variables, we can proceed to test manipulation of data on the page. Remember the id properties we set on the `<div>` elements yesterday? We will now learn how they play with JavaScript.
+Now that you know how to set variables, we can proceed to test manipulation of data on the page. Remember the 'id' properties we set on the `<div>` elements yesterday? We will now learn how they play with JavaScript.
 
 You should recall the fact that the HTML page is a document, and this is how you call and manipulate the page in JavaScript: declaring the div itself as a variable. Let's make our main_quiz_area div a variable:
 
@@ -55,7 +55,7 @@ You should recall the fact that the HTML page is a document, and this is how you
 var main_quiz_area = document.getElementById("main_quiz_area");
 ```
 
-Let's break down what we just did. We set up an appropriately-named variable to hold the value of the location of the main quiz area div. We then simply set the value of that variable to the result of calling a function named "getElementById" on our document object, and placed the id we wanted inside parenthesis.
+Let's break down what we just did. We set up an appropriately-named variable to hold the value of the location of the main quiz area div. We then simply set the value of that variable to the result of calling a function named "getElementById" on our document object, and placed the 'id' we wanted inside parenthesis.
 
 What is a function? It is simply a piece of code that is designed as a "formula" to get an expected result. We should be able to predict the result of the function based on how it is named, as with "getElementById". It seems like a pretty straightforward function name: get the html element by a specified id, which is what we specified in the parenthesis.
 
@@ -78,11 +78,11 @@ See what happened? We set the value of document.getElementById("main_quiz_area")
 
 Now that we know how to edit inner HTML of elements, we will hold off on manually inputting our quiz questions into the form, and let our JavaScript code do that for us. Yes, your code can write code for you!
 
-Because all we completed were exercises for basic understanding of the code, the only thing that should be in you JavaScript file is:
+Because all we completed were exercises for basic understanding of the code, the only thing that should be in your JavaScript file is:
+
 ```javascript
 var main_quiz_area_div = document.getElementById("main_quiz_area");
 ```
-
 
 <h2>EXTRA:</h2>
 

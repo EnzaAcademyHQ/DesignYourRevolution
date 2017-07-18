@@ -76,12 +76,50 @@ main_quiz_area.innerHTML = "Quiz Area Here";
 ```
 See what happened? We set the value of document.getElementById("main_quiz_area") to a variable named main_quiz_area, and executed the same exact function to get the same exact result. Variables and functions are designed to make life easier, so you will definitely appreciate them in the future!
 
-Now that we know how to edit inner HTMl of elements, we will hold off on manually inputting our quiz questions into the form, and let our JavaScript code do that for us. Yes, your code can write code for you!
+Now that we know how to edit inner HTML of elements, we will hold off on manually inputting our quiz questions into the form, and let our JavaScript code do that for us. Yes, your code can write code for you!
 
 Because all we completed were exercises for basic understanding of the code, the only thing that should be in you JavaScript file is:
 ```javascript
 var main_quiz_area_div = document.getElementById("main_quiz_area");
 ```
+
+
+EXTRA:
+
+If you were able to understand everything in this lab thoroughly, we can cover 2 more concepts needed for your quizzer application in this lab: objects and arrays(lists).
+
+We will discuss objects first. Look around -- objects are all around you. These objects all have properties. For example, if you were to think about a car as being an object, think about what makes a car a car: make, model, year, and type are some quick properties. All cars have a make, model, year, and a type. 
+
+In JavaScript, to create an object, we start with curly braces `{}`, then add properties & values within those curly braces. The format is: `{property: value}`. 
+
+If we were to create a car object in JavaScript, it would look like:
+```javascript
+var car = {make:'BMW', model:'328i', year: "2017", type: 'sedan'};
+```
+The above code created a car object that has a "BMW" make, "328i" model, "2017" year, and "sedan" type.
+
+We can then use dot-notation to get the properties of those objects: `car.make` or `car.year`.
+
+Think about what we want to create when it comes to a question. What components do all questions have? A question and an answer. So a question object would look something like:
+```javascript
+var car = {make:'BMW', model:'328i', year: "2017", type: 'sedan'};
+```
+
+Practice creating a few objects & testing properties of some in a blank codepen pad:
+```javascript
+var person = {name:'John', age:'26', hometown: "Los Angeles"};
+var phone = {name:'iPhone', manufacturer:'Apple', model: "7s Plus"};
+var computer = {name:'Macbook', manufacturer:'Apple', model: "Macbook Air"};
+
+console.log(person.age);
+console.log(phone.model);
+console.log(computer.manufacturer);
+
+```
+
+Now that we know how to create question objects, we just need to learn how create a list to hold them.
+Lists in JavaScript are called "arrays". 
+
 Voila! You now know JavaScript basics, including variables, getting/referencing HTML elements, and adding HTML to it. This is all you need to house the quizzer on the HTML side. We will learn more about adding functionality to the button and introducing another language, JavaScript, to you in the next lab.
 
 Feel free to Google concepts that you either you are having trouble with, or desire to learn more information about. A great website to use to learn more about the topics discussed in class:<br>

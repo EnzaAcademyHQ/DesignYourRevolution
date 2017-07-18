@@ -102,7 +102,7 @@ We can then use dot-notation to get the properties of those objects: `car.make` 
 
 Think about what we want to create when it comes to a question. What components do all questions have? A question and an answer. So a question object would look something like:
 ```javascript
-var car = {make:'BMW', model:'328i', year: "2017", type: 'sedan'};
+var car = {question:'What is the capital of Italy?', answer:'Rome'};
 ```
 
 Practice creating a few objects & testing properties of some in a blank codepen pad:
@@ -118,9 +118,46 @@ console.log(computer.manufacturer);
 ```
 
 Now that we know how to create question objects, we just need to learn how create a list to hold them.
-Lists in JavaScript are called "arrays". 
+Lists in JavaScript are called "arrays". To declare an array, we use brackets `[]`. An array of numbers looks like:
+```javascript
+var number_list = [1, 2, 3, 4, 5];
+```
+This simply creates an array with 5 values: 1, 2, 3, 4 and 5. We will cover how to get each item from the list in the next class, but for now, create an array of at least 10 questions you will use for your app:
 
-Voila! You now know JavaScript basics, including variables, getting/referencing HTML elements, and adding HTML to it. This is all you need to house the quizzer on the HTML side. We will learn more about adding functionality to the button and introducing another language, JavaScript, to you in the next lab.
+```javascript
+var question_list = [
+    {question:'What is the capital of Italy?', answer:'Rome'},
+    {question:'What is the capital of the United States?', answer:'Washington D.C.'},
+    {question:'What is the capital of Alabama?', answer:'Montgomery'},
+    {question:'What is the capital of Arkansas?', answer:'Little Rock'},
+    {question:'What is the capital of Arizona?', answer:'Phoenix'},
+    {question:'What is the capital of Alaska?', answer:'Juneau'},
+    {question:'What is the capital of California?', answer:'Sacramento'},
+    {question:'What is the capital of Colorado?', answer:'Denver'},
+    {question:'What is the capital of Connecticut?', answer:'Hartford'},
+    {question:'What is the capital of Delaware?', answer:'Dover'}
+];
+```
+
+Your javascript file should now look like this:
+```javascript
+var main_quiz_area_div = document.getElementById("main_quiz_area");
+
+var question_list = [
+    {question:'What is the capital of Italy?', answer:'Rome'},
+    {question:'What is the capital of the United States?', answer:'Washington D.C.'},
+    {question:'What is the capital of Alabama?', answer:'Montgomery'},
+    {question:'What is the capital of Arkansas?', answer:'Little Rock'},
+    {question:'What is the capital of Arizona?', answer:'Phoenix'},
+    {question:'What is the capital of Alaska?', answer:'Juneau'},
+    {question:'What is the capital of California?', answer:'Sacramento'},
+    {question:'What is the capital of Colorado?', answer:'Denver'},
+    {question:'What is the capital of Connecticut?', answer:'Hartford'},
+    {question:'What is the capital of Delaware?', answer:'Dover'}
+];
+```
+ 
+Voila! You now know JavaScript basics, including variables, getting/referencing HTML elements, and adding code to HTML. If you were able to complete the extras, you also know how to create objects, access properties, and create arrays. You are well on your way to creating an awesome quizzer tool.
 
 Feel free to Google concepts that you either you are having trouble with, or desire to learn more information about. A great website to use to learn more about the topics discussed in class:<br>
 **https://www.w3schools.com/**

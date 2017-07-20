@@ -278,6 +278,32 @@ function displayQuizResults(questions_wrong_count){
 }
 ```
 
+Our HTML code should look like:
+```html
+<html>
+<!-- I will be building an HTML-->  
+  
+  <!-- I will add head tags here -->
+  <head>
+    <!-- I will add a title tag here -->
+    <title>Mikos's Quizzer Tool - not visible on my actual page</title>
+  </head>
+  <body>
+    <h1>Mikos's Quizzer Tool</h1>
+    <!-- I will create a div for the main quiz section here-->
+    <div id="main_quiz_section">
+      <!-- I will create a div for the quiz feedback section here-->
+      <div id="quiz_feedback_section"></div>
+      
+      <!-- I will add a form tag for the quiz questions here-->
+      <form id="questions_form"></form>
+    </div>
+    <!-- I will add a button to start the quiz here-->
+    <button onclick="startQuiz()">Start Quiz</button>
+  </body>
+</html>
+```
+
 Our JavaScript code should now look like:
 ```javascript
 var main_quiz_area_div = document.getElementById("main_quiz_area");
@@ -297,44 +323,75 @@ var question_list = [
 ];
 
 function startQuiz(){
+  //clear the quiz form
   questions_form_div.innerHTML = '';
- for(counter=0; counter<questions.length; counter++){
-   var current_question_in_loop = questions[i];
-   var question_text = current_question_in_loop['question'];
-   var question_number = counter+1;
-   var displayed_question = "<label id='question"+counter+"'>"+question_number+". "+question_text+"</label><br>";
-
-   questions_form_div.innerHTML += displayed_question;
-   
-   var displayed_answer_input = "<input /><br>";
-   questions_form_div.innerHTML += displayed_answer_input;
- }
- questions_form_div.innerHTML += "<input type='button' onclick='submitAnswers()' value='Submit Answers' /><br>";
+  
+  //create a variable for number of questions in our list
+  var question_list_count = question_list.length;
+  
+  //loop through the questions
+  for(counter=0; counter<question_list_count; counter++){
+    //create variable for current question in loop
+    var current_question_in_loop = question_list[counter];
+    
+    //create variable for current question text
+    var current_question_text = current_question_in_loop['question'];
+    
+    //create a variable & set the display number for the current question
+    var current_question_display_number = counter +1;
+    
+    //create a variable for the displayed question
+    var displayed_question = "<label id='question"+counter+"'>"+current_question_display_number+". "+current_question_text+"</label><br>";
+    
+    //add the displayed question to our html
+    questions_form_div.innerHTML += displayed_question;
+    
+    //create a variable for a displayed answer input box
+    var displayed_answer_input = "<input /><br>";
+    
+    //add the displayed input box to our html
+    questions_form_div.innerHTML += displayed_answer_input;
+  }//end for loop
+  //add a submit answers button
+  questions_form_div.innerHTML += "<input type='button' onclick='submitAnswers()' value='Submit Answer' /><br>";
 }
 
 function checkAnswers(){
+  //set number of incorrect answers to 0
   var number_incorrect = 0;
+  
+  //create a variable for all submitted answers
   var submittedAnswers = document.getElementsByTagName("input");
 
-  for(i=0;i<submittedAnswers.length;i++){
-    submittedAnswer = submittedAnswers[i].value;
-    if(submittedAnswer != ques_obj[i]['answer']){
+  //loop through submitted answers
+  for(counter=0; counter<submittedAnswers.length;counter++){
+    submittedAnswer = submittedAnswers[counter].value;
+    
+    //if the submitted answer does not matche the real answer
+    if(submittedAnswer != question_list[counter]['answer']){
+      //increment the number incorrect
       number_incorrect ++;
-      document.getElementById("question"+i).className = "feedback_negative";
+      
+      //add a negative feedback css class
+      document.getElementById("question"+counter).className = "feedback_negative";
     }
+    //else if submitted answer matches answer
     else{
-      document.getElementById("question"+i).className = "feedback_positive";
+      //add positive feedback css class
+      document.getElementById("question"+counter).className = "feedback_positive";
     }
+    //display quiz results
     displayQuizResults(number_incorrect);
   }
 }
 
 function displayQuizResults(questions_wrong_count){
+  //if no questions were wrong
   if(questions_wrong_count == 0){
     quiz_feedback_div.innerHTML = "<div class='feedback_positive'>Congrats! you got a 100%!</div>";
   }
-  else{
-    quiz_feedback_div.innerHTML = "<div class='feedback_negative'>whoops, you got "+questions_wrong_count+" wrong...try again.</div>";
+  else{ //if questions were wrong, tell the user how many
+    quiz_feedback_div.innerHTML = "<div class='feedback_negative'>Whoops, you got "+questions_wrong_count+" wrong...try again.</div>";
   }
 }
 ```

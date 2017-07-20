@@ -222,9 +222,122 @@ function startQuiz(){
 
 Notice that we added a type and onclick properties to the input tags. We do not want to add a button tag because in our case it won't behave correctly, so we add an input tag and give it a button type. If we added a regular button, it would submit the entire form, which would refresh the page. We don't want this behavior, so making it an input and linking it to our 'submitAnswers()' function is what we want.
 
-But notice we need to clear our HTML before we re-add questions because the questions are adding on to each other instead of c
+But notice we need to clear our HTML before we re-add questions because the questions are adding on to each other instead of clearing out first. Let's add one line to clear our html before the loop:
+```javascript
+questions_form_div.innerHTML = '';
+ ```
 
-We will now learn how to check our answers.
+```javascript
+function startQuiz(){
+  questions_form_div.innerHTML = '';
+ for(counter=0; counter<questions.length; counter++){
+   var current_question_in_loop = questions[i];
+   var question_text = current_question_in_loop['question'];
+   var question_number = counter+1;
+   var displayed_question = "<label id='question"+counter+"'>"+question_number+". "+question_text+"</label><br>";
+
+   questions_form_div.innerHTML += displayed_question;
+   
+   var displayed_answer_input = "<input /><br>";
+   questions_form_div.innerHTML += displayed_answer_input;
+ }
+ questions_form_div.innerHTML += "<input type='button' onclick='submitAnswers()' value='Submit Answers' /><br>";
+}
+```
+
+
+We will now learn how to check our answers. Loop through your answers, and compare the answers submitted to the answers defined:
+```javascript
+function checkAnswers(){
+  var number_incorrect = 0;
+  var submittedAnswers = document.getElementsByTagName("input");
+
+  for(i=0;i<submittedAnswers.length;i++){
+    submittedAnswer = submittedAnswers[i].value;
+    if(submittedAnswer != ques_obj[i]['answer']){
+      number_incorrect ++;
+      document.getElementById("question"+i).className = "feedback_negative";
+    }
+    else{
+      document.getElementById("question"+i).className = "feedback_positive";
+    }
+    displayQuizResults(number_incorrect);
+  }
+}
+```
+
+Let's add our code to display our quiz results:
+```javascript
+function displayQuizResults(questions_wrong_count){
+  if(questions_wrong_count == 0){
+    quiz_feedback_div.innerHTML = "<div class='feedback_positive'>Congrats! you got a 100%!</div>";
+  }
+  else{
+    quiz_feedback_div.innerHTML = "<div class='feedback_negative'>whoops, you got "+questions_wrong_count+" wrong...try again.</div>";
+  }
+}
+```
+
+Our JavaScript code should now look like:
+```javascript
+var main_quiz_area_div = document.getElementById("main_quiz_area");
+var questions_form_div = document.getElementById("questions_form");
+
+var question_list = [
+    {question:'What is the capital of Italy?', answer:'Rome'},
+    {question:'What is the capital of the United States?', answer:'Washington D.C.'},
+    {question:'What is the capital of Alabama?', answer:'Montgomery'},
+    {question:'What is the capital of Arkansas?', answer:'Little Rock'},
+    {question:'What is the capital of Arizona?', answer:'Phoenix'},
+    {question:'What is the capital of Alaska?', answer:'Juneau'},
+    {question:'What is the capital of California?', answer:'Sacramento'},
+    {question:'What is the capital of Colorado?', answer:'Denver'},
+    {question:'What is the capital of Connecticut?', answer:'Hartford'},
+    {question:'What is the capital of Delaware?', answer:'Dover'}
+];
+
+function startQuiz(){
+  questions_form_div.innerHTML = '';
+ for(counter=0; counter<questions.length; counter++){
+   var current_question_in_loop = questions[i];
+   var question_text = current_question_in_loop['question'];
+   var question_number = counter+1;
+   var displayed_question = "<label id='question"+counter+"'>"+question_number+". "+question_text+"</label><br>";
+
+   questions_form_div.innerHTML += displayed_question;
+   
+   var displayed_answer_input = "<input /><br>";
+   questions_form_div.innerHTML += displayed_answer_input;
+ }
+ questions_form_div.innerHTML += "<input type='button' onclick='submitAnswers()' value='Submit Answers' /><br>";
+}
+
+function checkAnswers(){
+  var number_incorrect = 0;
+  var submittedAnswers = document.getElementsByTagName("input");
+
+  for(i=0;i<submittedAnswers.length;i++){
+    submittedAnswer = submittedAnswers[i].value;
+    if(submittedAnswer != ques_obj[i]['answer']){
+      number_incorrect ++;
+      document.getElementById("question"+i).className = "feedback_negative";
+    }
+    else{
+      document.getElementById("question"+i).className = "feedback_positive";
+    }
+    displayQuizResults(number_incorrect);
+  }
+}
+
+function displayQuizResults(questions_wrong_count){
+  if(questions_wrong_count == 0){
+    quiz_feedback_div.innerHTML = "<div class='feedback_positive'>Congrats! you got a 100%!</div>";
+  }
+  else{
+    quiz_feedback_div.innerHTML = "<div class='feedback_negative'>whoops, you got "+questions_wrong_count+" wrong...try again.</div>";
+  }
+}
+```
 
 Feel free to Google concepts that you either you are having trouble with, or desire to learn more information about. A great website to use to learn more about the topics discussed in class:<br>
 **https://www.w3schools.com/**

@@ -110,7 +110,7 @@ function startQuiz(){
  }
 }
 
-function checkAnswers(){
+function submitAnswers(){
 }
 
 function displayQuizResults(questions_wrong_count){
@@ -176,9 +176,55 @@ See where we included the counter in the id? The reason we do this is to differe
 
 Also, pay close attention to the quote usage. We started our line with double quotes, but also used single quotes. Whatever quote type we start with, the code will look for that same type to close the quote. For example, see where we close the double quote right before the `+` sign and the `counter` variable? This is to ensure we got the variable `counter` and not the word "counter". If we kept the word "counter" inside the double quotes, it would display the word "counter" instead of the number of the counter, which is what we want. When we started the double quotes again, noticed we added a single quote to finish closing off the id name of the label. Remember that our ids need to be inside quotes, but we needed to use 2 types of quotes to mix our variables with our HTML.
 
+There are a couple of more things missing from our function: displaying text boxes for answers, and displaying a submit answers button.
 
+For displaying text boxes, we simply add a line for that after we display our question. Create a variable for this line and it at the end of the loop:
+```javascript
+var displayed_answer_input = "<input /><br>";
+questions_form_div.innerHTML += displayed_answer_input;
+```
 
-Voila! You now know JavaScript basics, including variables, getting/referencing HTML elements, and adding code to HTML. If you were able to complete the extras, you also know how to create objects, access properties, and create arrays. You are well on your way to creating an awesome quizzer tool.
+Our function should now look like this:
+```javascript
+function startQuiz(){
+ for(counter=0; counter<questions.length; counter++){
+   var current_question_in_loop = questions[i];
+   var question_text = current_question_in_loop['question'];
+   var question_number = counter+1;
+   var displayed_question = "<label id='question"+counter+"'>"+question_number+". "+question_text+"</label><br>";
+
+   questions_form_div.innerHTML += displayed_question;
+   
+   var displayed_answer_input = "<input /><br>";
+   questions_form_div.innerHTML += displayed_answer_input;
+ }
+}
+```
+Notice we created a new 'input' tag, but this tag doesn't have a closing `</input>` tag. You will learn that some HTML tags are exceptions and do not need full closing `</tag>` type of tags, and simply adding a forward slash can close it. The `<input>` tag is one of those tags.
+
+Our last step is to show a button to submit answers. We will add this inside the function but outside of the loop. Because we don't want this button to display for every question, only once. Let's add this at the bottom of our function outside of the loop:
+```javascript
+function startQuiz(){
+ for(counter=0; counter<questions.length; counter++){
+   var current_question_in_loop = questions[i];
+   var question_text = current_question_in_loop['question'];
+   var question_number = counter+1;
+   var displayed_question = "<label id='question"+counter+"'>"+question_number+". "+question_text+"</label><br>";
+
+   questions_form_div.innerHTML += displayed_question;
+   
+   var displayed_answer_input = "<input /><br>";
+   questions_form_div.innerHTML += displayed_answer_input;
+ }
+ questions_form_div.innerHTML += "<input type='button' onclick='submitAnswers()' value='Submit Answers' /><br>";
+}
+```
+
+Notice that we added a type and onclick properties to the input tags. We do not want to add a button tag because in our case it won't behave correctly, so we add an input tag and give it a button type. If we added a regular button, it would submit the entire form, which would refresh the page. We don't want this behavior, so making it an input and linking it to our 'submitAnswers()' function is what we want.
+
+But notice we need to clear our HTML before we re-add questions because the questions are adding on to each other instead of c
+
+We will now learn how to check our answers.
 
 Feel free to Google concepts that you either you are having trouble with, or desire to learn more information about. A great website to use to learn more about the topics discussed in class:<br>
 **https://www.w3schools.com/**

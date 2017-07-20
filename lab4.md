@@ -306,7 +306,6 @@ Our HTML code should look like:
 
 Our JavaScript code should now look like:
 ```javascript
-var main_quiz_area_div = document.getElementById("main_quiz_area");
 var questions_form_div = document.getElementById("questions_form");
 
 var question_list = [

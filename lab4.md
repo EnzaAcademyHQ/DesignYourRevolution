@@ -307,6 +307,7 @@ Our HTML code should look like:
 Our JavaScript code should now look like:
 ```javascript
 var questions_form_div = document.getElementById("questions_form");
+var quiz_feedback_section_div = document.getElementById("quiz_feedback_section");
 
 var question_list = [
     {question:'What is the capital of Italy?', answer:'Rome'},
@@ -352,7 +353,7 @@ function startQuiz(){
     questions_form_div.innerHTML += displayed_answer_input;
   }//end for loop
   //add a submit answers button
-  questions_form_div.innerHTML += "<input type='button' onclick='submitAnswers()' value='Submit Answer' /><br>";
+  questions_form_div.innerHTML += "<input type='button' onclick='checkAnswers()' value='Submit Answer' /><br>";
 }
 
 function checkAnswers(){
@@ -387,10 +388,10 @@ function checkAnswers(){
 function displayQuizResults(questions_wrong_count){
   //if no questions were wrong
   if(questions_wrong_count == 0){
-    quiz_feedback_div.innerHTML = "<div class='feedback_positive'>Congrats! you got a 100%!</div>";
+    quiz_feedback_section_div.innerHTML = "<div class='feedback_positive'>Congrats! you got a 100%!</div>";
   }
   else{ //if questions were wrong, tell the user how many
-    quiz_feedback_div.innerHTML = "<div class='feedback_negative'>Whoops, you got "+questions_wrong_count+" wrong...try again.</div>";
+    quiz_feedback_section_div.innerHTML = "<div class='feedback_negative'>Whoops, you got "+questions_wrong_count+" wrong...try again.</div>";
   }
 }
 ```

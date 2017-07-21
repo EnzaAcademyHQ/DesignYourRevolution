@@ -1,7 +1,7 @@
 ---
-title: Lab 4: STEM with Enza Academy
+title: Lab 5: STEM with Enza Academy
 ---
-## Lab 4
+## Lab 5
 
 **Introduction:
 Today we will learn about styling our pages with CSS.**

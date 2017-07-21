@@ -154,6 +154,13 @@ Continue to think of ways to add more styles to your pages. A good resource is w
 
 Let's see what you can come up with!
 
+<h2>Bonus</h2>
+Add background music by adding a sizeless iframe(setting width & height to 0), with a youtube link of your choice:
+```html
+<iframe width="0" height="0" src="https://www.youtube.com/embed/zMV5XOjtOEI?autoplay=1" frameborder="0" allowfullscreen></iframe>
+```
+
+Make sure the last part of the URL has the "autoplay=1" in it so it can play automatically.
 
 Feel free to Google concepts that you either you are having trouble with, or desire to learn more information about. A great website to use to learn more about the topics discussed in class:<br>
 **https://www.w3schools.com/**

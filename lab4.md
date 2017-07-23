@@ -23,7 +23,7 @@ Try that code above in your scrap editor.
 
 There are 4 parts to the for loop -- set the counter, give our counter a max, increment our counter until we meet that max, and tell the program to do something each time. So for our example, we set the counter to 0, gave it a max of 1 less than the length of the names array(which is 4), incremented the counter from 0 until we reached the max, and told the console to print the question it is currently on in the loop.
 
-As you can guess, to loop through our questions array we would need to loop through the array in a similar fashion. Remember that clicking the "Start Quiz" button on our HTML side makes the questions appear, so lets place the following code inside our 'startQuiz()' function:
+As you can guess, to loop through our questions array we would need to loop through the array in a similar fashion. Remember that clicking the "Start Quiz" button on our HTML side makes the questions appear, so let's place the following code inside our 'startQuiz()' function:
 ```javascript
 function startQuiz(){
  for(counter=0; counter<questions.length; counter++){
@@ -176,7 +176,7 @@ See where we included the counter in the id? The reason we do this is to differe
 
 Also, pay close attention to the quote usage. We started our line with double quotes, but also used single quotes. Whatever quote type we start with, the code will look for that same type to close the quote. For example, see where we close the double quote right before the `+` sign and the `counter` variable? This is to ensure we got the variable `counter` and not the word "counter". If we kept the word "counter" inside the double quotes, it would display the word "counter" instead of the number of the counter, which is what we want. When we started the double quotes again, noticed we added a single quote to finish closing off the id name of the label. Remember that our ids need to be inside quotes, but we needed to use 2 types of quotes to mix our variables with our HTML.
 
-There are a couple of more things missing from our function: displaying text boxes for answers, and displaying a submit answers button.
+There are a couple of more things missing from our function: displaying text boxes for answers, and displaying a "Submit Answers" button.
 
 For displaying text boxes, we simply add a line for that after we display our question. Create a variable for this line and it at the end of the loop:
 ```javascript
@@ -220,7 +220,7 @@ function startQuiz(){
 }
 ```
 
-Notice that we added a type and onclick properties to the input tags. We do not want to add a button tag because in our case it won't behave correctly, so we add an input tag and give it a button type. If we added a regular button, it would submit the entire form, which would refresh the page. We don't want this behavior, so making it an input and linking it to our 'submitAnswers()' function is what we want.
+Notice that we added a "type" and "onclick" properties to the input tags. We do not want to add a button tag because in our case it won't behave correctly, so we add an input tag and give it a button type. If we added a regular button, it would submit the entire form, which would refresh the page. We don't want this behavior, so making it an input and linking it to our 'submitAnswers()' function is what we want.
 
 But notice we need to clear our HTML before we re-add questions because the questions are adding on to each other instead of clearing out first. Let's add one line to clear our html before the loop:
 ```javascript
@@ -367,7 +367,7 @@ function checkAnswers(){
   for(counter=0; counter<submittedAnswers.length;counter++){
     submittedAnswer = submittedAnswers[counter].value;
     
-    //if the submitted answer does not matche the real answer
+    //if the submitted answer does not match correct answer
     if(submittedAnswer != question_list[counter]['answer']){
       //increment the number incorrect
       number_incorrect ++;
@@ -375,7 +375,7 @@ function checkAnswers(){
       //add a negative feedback css class
       document.getElementById("question"+counter).className = "feedback_negative";
     }
-    //else if submitted answer matches answer
+    //else if submitted answer matches correct answer
     else{
       //add positive feedback css class
       document.getElementById("question"+counter).className = "feedback_positive";
@@ -388,6 +388,7 @@ function checkAnswers(){
 function displayQuizResults(questions_wrong_count){
   //if no questions were wrong
   if(questions_wrong_count == 0){
+    //display success message
     quiz_feedback_section_div.innerHTML = "<div class='feedback_positive'>Congrats! you got a 100%!</div>";
   }
   else{ //if questions were wrong, tell the user how many
@@ -399,7 +400,7 @@ function displayQuizResults(questions_wrong_count){
 Feel free to Google concepts that you either you are having trouble with, or desire to learn more information about. A great website to use to learn more about the topics discussed in class:<br>
 **https://www.w3schools.com/**
 
-Simply go here, search a specific topic, and you'll find detailed exmplanations and examples of all the topics that were discussed today.
+Simply go here, search a specific topic, and you'll find detailed explanations and examples of all the topics that were discussed today.
 
 
 Instructor contact information can be found at the bottom of the lab for one-on-one questions.

@@ -22,7 +22,7 @@ html{
 
 How CSS works is we give an element we want to style, and place the style inside curly braces `{}`. The style format SHOULD look familiar to a data structure we already know -- CSS styles are comprised of a property, colon-separated with a value. Remember objects? Yeah. So we added a background color to everything within the HTML tags in the above code.
 
-What if we want to take it a step further and add a background image? CSS has a property called a background-image. We simply set the image to the url we want to use. Simply google an image, grab the link for the image, and set that link. For example:
+What if we want to take it a step further and add a background image? CSS has a property called a background-image. We simply set the image to the url we want to use. Simply Google an image, grab the link for the image, and set that link. For example:
 ```css
 html{
   background-image: url("https://i.kinja-img.com/gawker-media/image/upload/s--ExuCFXZ8--/c_scale,f_auto,fl_progressive,q_80,w_800/tzzllrqpzhihslnkwlq4.gif");
@@ -165,7 +165,7 @@ Make sure the last part of the URL has the "autoplay=1" in it so it can play aut
 Feel free to Google concepts that you either you are having trouble with, or desire to learn more information about. A great website to use to learn more about the topics discussed in class:<br>
 **https://www.w3schools.com/**
 
-Simply go here, search a specific topic, and you'll find detailed exmplanations and examples of all the topics that were discussed today.
+Simply go here, search a specific topic, and you'll find detailed explanations and examples of all the topics that were discussed today.
 
 
 Instructor contact information can be found at the bottom of the lab for one-on-one questions.

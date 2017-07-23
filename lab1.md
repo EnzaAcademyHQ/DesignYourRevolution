@@ -22,7 +22,7 @@ Every HTML page has encapsulating tags; meaning that the tag begins, content is 
 </html>
 ```
 
-Notice the similarities and differences between the opening and closing tags? They are exactly the same with the exception of an extra "/" after the closing tag's less-than(<) sign.
+Notice the similarities and differences between the opening and closing tags? They are exactly the same except for an extra "/" after the closing tag's less-than(<) sign.
 
 Before we continue to the next step, it is a good idea for you, the developer, to know exactly what is happening in the code. Developers do this by adding comments to their code. Comments are pieces of code that are there for reference purposes, and are not seen on the user side or executed. These are usually used for informing other developers looking at the code of something the original developer thought was important to indicate. They can also be helpful for you to use if you step away from your code for a good length of time and return to it.
 
@@ -80,7 +80,7 @@ This gives us something to display to browser tabs and search engine results. Re
   
 The next tags we will add for the tool we are building are `<body>` tags. The body tags simply tell the HTML interpreter that everything between the `<body></body>` tags is the body(better described as the content) of the page. Everything that we see displayed on an HTML page, such as images, paragraphs, and tables, is placed within the `<body>` tags.
   
-If you haven't yet noticed, HTML tags are composed hierarchically. With our current code, we see that we have master `<html>` tags, a child `<head>` tag, which has a child `<title>` tag of its own. That being said, <head> and <body> are siblings -- where do you think this means the `<body>` tags are placed? Because they are siblings, `<head>` and `<body>` tags are hierchically on the same level. However, the `<head>` tags are always defined before the `<body>` tags. Let's add our `<body>` tags to our code:
+If you haven't yet noticed, HTML tags are composed hierarchically. With our current code, we see that we have master `<html>` tags, a child `<head>` tag, which has a child `<title>` tag of its own. That being said, <head> and <body> are siblings -- where do you think this means the `<body>` tags are placed? Because they are siblings, `<head>` and `<body>` tags are hierarchically on the same level. However, the `<head>` tags are always defined before the `<body>` tags. Let's add our `<body>` tags to our code:
 
 ```html
 <html>
@@ -340,7 +340,7 @@ Voila! You have a basic skeleton of an HTML page with a heading, div sections, a
 Feel free to Google concepts that you either you are having trouble with, or desire to learn more information about. A great website to use to learn more about the topics discussed in class:<br>
 **https://www.w3schools.com/**
 <br>
-Simply go here, search a specific topic, and you'll find detailed exmplanations and examples of all the topics that were discussed today.
+Simply go here, search a specific topic, and you'll find detailed explanations and examples of all the topics that were discussed today.
 
 
 Instructor contact information can be found at the bottom of the lab for one-on-one questions.

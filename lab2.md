@@ -15,7 +15,7 @@ Much of the things you learn can be immediately practiced for understanding, and
 
 Building upon things from the last lab, we will learn how to manipulate and target the HTML elements on the page we previously created and identified with the 'id' property.
 
-First, we will discuss variables in JavaScript. Variables are simply entities used to store values. In math, you are usually trying to solve for a variable's value. In programming, we already know what the values are because we are defining them. We define vaiables using the `var` keyword:
+First, we will discuss variables in JavaScript. Variables are simply entities used to store values. In math, you are usually trying to solve for a variable's value. In programming, we already know what the values are because we are defining them. We define variables using the `var` keyword:
 ```javascript
 var me = "Mikos";
 ```
@@ -105,7 +105,7 @@ Think about what we want to create when it comes to a question. What components 
 var car = {question:'What is the capital of Italy?', answer:'Rome'};
 ```
 
-Practice creating a few objects & testing properties of some in a blank codepen pad:
+Practice creating a few objects & testing properties of some in a blank CodePen pad:
 ```javascript
 var person = {name:'John', age:'26', hometown: "Los Angeles"};
 var phone = {name:'iPhone', manufacturer:'Apple', model: "7s Plus"};
@@ -162,7 +162,7 @@ Voila! You now know JavaScript basics, including variables, getting/referencing 
 Feel free to Google concepts that you either you are having trouble with, or desire to learn more information about. A great website to use to learn more about the topics discussed in class:<br>
 **https://www.w3schools.com/**
 
-Simply go here, search a specific topic, and you'll find detailed exmplanations and examples of all the topics that were discussed today.
+Simply go here, search a specific topic, and you'll find detailed explanations and examples of all the topics that were discussed today.
 
 
 Instructor contact information can be found at the bottom of the lab for one-on-one questions.

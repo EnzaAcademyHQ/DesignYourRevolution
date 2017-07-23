@@ -52,7 +52,7 @@ var name_list = ["Jack", "Joe", "Mark", "James"];
 ```
 The position of "Joe" in 'name_list' is position 1, instead of 2, like you may think. We don't start counting 1, 2, 3, 4... -- but instead 0, 1, 2, 3...
 
-If we wanted to get "Joe" from the list, we use brackets on the array withthe position to do so. Since "Joe" is at the 1 position, we get "Joe" from the list with:
+If we wanted to get "Joe" from the list, we use brackets on the array with the position to do so. Since "Joe" is at the 1 position, we get "Joe" from the list with:
 
 ```javascript
 name_list[1];
@@ -206,7 +206,7 @@ This will loop through each question in the list and perform the code in the cur
 Feel free to Google concepts that you either you are having trouble with, or desire to learn more information about. A great website to use to learn more about the topics discussed in class:<br>
 **https://www.w3schools.com/**
 
-Simply go here, search a specific topic, and you'll find detailed exmplanations and examples of all the topics that were discussed today.
+Simply go here, search a specific topic, and you'll find detailed explanations and examples of all the topics that were discussed today.
 
 <h2>Contact</h2>
 Instructor contact information can be found at the bottom of the lab for one-on-one questions.

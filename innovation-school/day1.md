@@ -562,30 +562,30 @@ You should also wrap each team member, including names and titles, in its own di
 
 If you have 5 in your group, it would probably be best to just use one row and split the width of each team member to 20% in CSS.
 
-For further customization, add class names of "team-title" and "team-name" to the respective `<p>` tags:
+For further customization, add class names of "team-member-name" and "team-member-title" to the respective `<p>` tags:
 ```html
 <div class="team-row">
   <div class="team-member">
-    <img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" class="team-photo"/>
-    <p class="team-name">Mikos</p>
-    <p class="team-title">Founder/CEO</p>
+    <img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" class="team-member-photo"/>
+    <p class="team-member-name">Mikos</p>
+    <p class="team-member-title">Founder/CEO</p>
   </div>
   <div class="team-member">
-    <img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" class="team-photo"/>
-    <p class="team-name">Mikos</p>
-    <p class="team-title">CTO</p>
+    <img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" class="team-member-photo"/>
+    <p class="team-member-name">Mikos</p>
+    <p class="team-member-title">CTO</p>
   </div>
 </div>
 <div class="team-row">
   <div class="team-member">
-    <img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" class="team-photo"/>
-    <p class="team-name">Mikos</p>
-    <p class="team-title">CFO</p>
+    <img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" class="team-member-photo"/>
+    <p class="team-member-name">Mikos</p>
+    <p class="team-member-title">CFO</p>
   </div>
   <div class="team-member">
-    <img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" class="team-photo"/>
-    <p class="team-name">Mikos</p>
-    <p class="team-title">Marketer</p>
+    <img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" class="team-member-photo"/>
+    <p class="team-member-name">Mikos</p>
+    <p class="team-member-title">Marketer</p>
   </div>
 </div>
 ```
@@ -595,10 +595,10 @@ Add CSS rules to your CSS to customize the display of your team members.
 If you want, try adding an additional paragraph at the bottom of each team member for a bio. Give it a class name of "team-bio":
 ```html
  <div class="team-member">
-    <img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" class="team-photo"/>
-    <p class="team-name">Mikos</p>
-    <p class="team-title">Marketer</p>
-    <p class="team-bio">Mikos always loved marketing, so he joined "Awesome" to do just that.</p>
+    <img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" class="team-member-photo"/>
+    <p class="team-member-name">Mikos</p>
+    <p class="team-member-title">Marketer</p>
+    <p class="team-member-bio">Mikos always loved marketing, so he joined "Awesome" to do just that.</p>
   </div>
 ```
 

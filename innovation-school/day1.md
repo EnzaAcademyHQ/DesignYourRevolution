@@ -455,6 +455,153 @@ Play with the spacing until it meets your team's visual tastes.
 
 You now have a basic first page for your project's landing page. You can now focus on adding content to each of the sections, along with thinking of more elements to add to it. We will show you how to implement adding images to your sites in the future, in case you want to add things such as team photos.
 
+<h2>Extra</h2>
+Let's add customizations to your team pages. First, everyone needs an image. Add image tags(`<img />`) for each member on the "Team" section AFTER the first paragraph. For example, for 4 team members, it would look something like:
+```html
+<div id="team">
+  <h1>Team</h1>
+  <p>We have a really big team!</p>
+  <img />
+  <img />
+  <img />
+  <img />
+</div>
+```
+
+Notice none of the image tags have closing `</img>` tags. That is because there are some tags in HTML that you simply close off by adding a forward slash at the very end of the opening tag. Image tags are one of those types. We have a place for the image, but need an image itself.
+
+Find an image online of each team member,for example, from a social media profile. Go to this image, control-click on it, and click "Copy Image Address". We will be pasting the link to this image in our image tags. 
+
+Go to your image tags and add a "url" property to the tag, and set it equal to the link you just copied by pasting it. It should look something like:
+```html
+<img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" />
+```
+
+Do this for all team members. Be sure the images are large enough for a web page size, 150px x 150px, and will not lose quality if the image needs to be enlarged through CSS.
+
+When you all have your team images, go back and add a class name "team-photo" to the images CSS. We will reference this class to make rules in CSS:
+```html
+<img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" class="team-photo"/>
+```
+
+We use a hashtag to reference an id in CSS, but we simply use a dot(.) to reference a class. So let's make a CSS rule to make all of your team images the same size. 150x150 is a standard size, but that may be more or less depending on your needs:
+```css
+.team-photo{
+  width: 150px;
+  height: 150px;
+}
+```
+
+Add names and titles in 2 `<p>` tags under each photo:
+```html
+<div id="team">
+  <h1>Team</h1>
+  <p>We have a really big team!</p>
+  <img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" class="team-photo"/>
+  <p>Mikos</p>
+  <p>Founder/CEO</p>
+  <img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" class="team-photo"/>
+  <p>Mikos</p>
+  <p>CTO</p>
+  <img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" class="team-photo"/>
+  <p>Mikos</p>
+  <p>CFO</p>
+  <img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" class="team-photo"/>
+  <p>Mikos</p>
+  <p>Marketer</p>
+</div>
+```
+
+Now that you have team members, you need to make them display nicely. If you have a team of 4, the best way is to create 2 rows of 2 members each. This can be done by simply adding surrounding `<div>` tags for each row, and giving it a "team-row" class:
+```html
+<div class="team-row">
+  <img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" class="team-photo"/>
+  <p>Mikos</p>
+  <p>Founder/CEO</p>
+  <img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" class="team-photo"/>
+  <p>Mikos</p>
+  <p>CTO</p>
+</div>
+<div class="team-row">
+  <img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" class="team-photo"/>
+  <p>Mikos</p>
+  <p>CFO</p>
+  <img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" class="team-photo"/>
+  <p>Mikos</p>
+  <p>Marketer</p>
+</div>
+```
+
+You should also wrap each team member, including names and titles, in its own div tag with a "team-member" class:
+```html
+<div class="team-row">
+  <div class="team-member">
+    <img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" class="team-photo"/>
+    <p>Mikos</p>
+    <p>Founder/CEO</p>
+  </div>
+  <div class="team-member">
+    <img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" class="team-photo"/>
+    <p>Mikos</p>
+    <p>CTO</p>
+  </div>
+</div>
+<div class="team-row">
+  <div class="team-member">
+    <img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" class="team-photo"/>
+    <p>Mikos</p>
+    <p>CFO</p>
+  </div>
+  <div class="team-member">
+    <img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" class="team-photo"/>
+    <p>Mikos</p>
+    <p>Marketer</p>
+  </div>
+</div>
+```
+
+If you have 5 in your group, it would probably be best to just use one row and split the width of each team member to 20% in CSS.
+
+For further customization, add class names of "team-title" and "team-name" to the respective `<p>` tags:
+```html
+<div class="team-row">
+  <div class="team-member">
+    <img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" class="team-photo"/>
+    <p class="team-name">Mikos</p>
+    <p class="team-title">Founder/CEO</p>
+  </div>
+  <div class="team-member">
+    <img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" class="team-photo"/>
+    <p class="team-name">Mikos</p>
+    <p class="team-title">CTO</p>
+  </div>
+</div>
+<div class="team-row">
+  <div class="team-member">
+    <img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" class="team-photo"/>
+    <p class="team-name">Mikos</p>
+    <p class="team-title">CFO</p>
+  </div>
+  <div class="team-member">
+    <img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" class="team-photo"/>
+    <p class="team-name">Mikos</p>
+    <p class="team-title">Marketer</p>
+  </div>
+</div>
+```
+
+Add CSS rules to your CSS to customize the display of your team members.
+
+If you want, try adding an additional paragraph at the bottom of each team member for a bio. Give it a class name of "team-bio":
+```html
+ <div class="team-member">
+    <img src="https://avatars2.githubusercontent.com/u/1891072?v=4&s=96" class="team-photo"/>
+    <p class="team-name">Mikos</p>
+    <p class="team-title">Marketer</p>
+    <p class="team-bio">Mikos always loved marketing, so he joined "Awesome" to do just that.</p>
+  </div>
+```
+
 Feel free to Google concepts that you either you are having trouble with, or desire to learn more information about. A great website to use to learn more about the topics discussed in class:<br>
 **https://www.w3schools.com/**
 <br>

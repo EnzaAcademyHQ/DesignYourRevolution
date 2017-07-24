@@ -6,9 +6,6 @@ title: Day 1: Innovation School with Enza Academy
 **Introduction:
 Today we will learn basic concepts of HTML. We will dissect the components of an HTML page, discussing different elements & tags.**
 
-Office hours for 7/17:
-6:30p-7:30p, Room 328
-
 HTML pages are documents comprised of components called "elements". Every HTML page has elements. 
   
 Think of it this way: in chemistry, matter is composed of core elements. Every piece of matter contains elements from the same base elements found in the periodic table. You can view web page elements as exhibiting the same functionality.

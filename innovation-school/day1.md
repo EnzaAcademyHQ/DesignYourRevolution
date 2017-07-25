@@ -612,7 +612,7 @@ Add class rules for team member elements:
 }
 ```
 
-Let's put our team member divs into a 2x2 grid:
+Let's put our team member divs into a 2x2 grid. Indent left margin by 20%, and set the width of the row to 80%. Float each team member element to the left with a width of 50% because we one member only needs 50% of row space.
 ```css
 .team-row{
   position: relative;
@@ -625,7 +625,43 @@ Let's put our team member divs into a 2x2 grid:
 }
 ```
 
-Indent left margin by 20%, and set the width of the row to 80%. Then 
+Add `z-index` to top-menu & set it to a high value to make sure menu appears in front of everything:
+```css
+#top-menu{
+  z-index: 99999;
+}
+```
+
+We can add `text-align: center;` to all page sections to make it a bit neater:
+```css
+#home{
+  text-align: center;
+}
+#about{
+  text-align: center;
+}
+#team{
+  text-align: center;
+}
+```
+
+Do this for each page section. If your images become unaligned, you'd need to change your other team-row and team-member rules:
+```css
+.team-row{
+  height: 300px;
+}
+
+.team-member{
+  width:50%;
+  float: left;
+}
+```
+
+Otherwise, you can keep the alignment the same to get it to appear in a grid again.
+
+Now use this time to customize your pages by adding info, pictures, and deciding on team roles!
+
+
 Feel free to Google concepts that you either you are having trouble with, or desire to learn more information about. A great website to use to learn more about the topics discussed in class:<br>
 **https://www.w3schools.com/**
 <br>

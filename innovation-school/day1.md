@@ -602,6 +602,18 @@ If you want, try adding an additional paragraph at the bottom of each team membe
   </div>
 ```
 
+```css
+.team-row{
+  position: relative;
+  width: 80%;
+  margin-left:20%;
+}
+.team-member{
+  float: right;
+  width:50%;
+}
+```
+
 Feel free to Google concepts that you either you are having trouble with, or desire to learn more information about. A great website to use to learn more about the topics discussed in class:<br>
 **https://www.w3schools.com/**
 <br>

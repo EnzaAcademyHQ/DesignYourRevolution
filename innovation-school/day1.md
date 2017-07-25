@@ -601,7 +601,18 @@ If you want, try adding an additional paragraph at the bottom of each team membe
     <p class="team-member-bio">Mikos always loved marketing, so he joined "Awesome" to do just that.</p>
   </div>
 ```
+Add class rules for team member elements:
+```css
+.team-member-name{
+  font-size: 26px;
+  font-weight: bold;
+}
+.team-member-title{
+  font-style: italic;
+}
+```
 
+Let's put our team member divs into a 2x2 grid:
 ```css
 .team-row{
   position: relative;
@@ -609,11 +620,12 @@ If you want, try adding an additional paragraph at the bottom of each team membe
   margin-left:20%;
 }
 .team-member{
-  float: right;
+  float: left;
   width:50%;
 }
 ```
 
+Indent left margin by 20%, and set the width of the row to 80%. Then 
 Feel free to Google concepts that you either you are having trouble with, or desire to learn more information about. A great website to use to learn more about the topics discussed in class:<br>
 **https://www.w3schools.com/**
 <br>

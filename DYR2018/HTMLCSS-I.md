@@ -1,6 +1,4 @@
----
-title: HTML & CSS I
----
+## Title: HTML & CSS I
 
 **Introduction:
 We will learn basic HTML & CSS to create a basic landing page for your project. We will dissect the components of an HTML page, discussing different elements & tags.**

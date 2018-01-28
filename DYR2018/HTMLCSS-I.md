@@ -90,12 +90,11 @@ Now that we have a section to hold the code we can actually see, we can now star
   <!-- creating body tag -->
   <body>
     <!-- creating a menu list -->
-    <ul id="top-menu">
-      <li><a href="#home">Home</a>
-      <li><a href="#about">About</a>
-      <li><a href="#team">Team</a>
-      <li><a href="#contact">Contact</a>
-      </li>
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Team</li>
+      <li>Contact</li>
     </ul>
   </body>
 </html>
@@ -103,7 +102,22 @@ Now that we have a section to hold the code we can actually see, we can now star
 
 In the end, you may want to add more pages, but this is the bare minimum required for your projects.
 
-The next step is to create a page wrapper, which "wraps" the content within its own section, aside from the menu and rest of the page. This is done by using division, or div, tags. Div tags need differentiation, so usually a class or id is attached to it to do this. They functionally are the same, but are used differently. IDs are only used once, while classes can be used more than once. Since we will ony have one page wrapper, an id is appropriate here. You will see the difference when you use classes later. To attach an id or class to a tag, simply type the type and value within the opening tag. You can name your ids and classes as you like, they just need to be consistent in CSS. Create a page wrapper div after the menu list:
+Our links need to be clickable, so we need to surround them with 'a' tags. You'll see how this works later. Surround each link with an 'a' tag:
+```html
+<ul>
+  <li><a>Home</a></li>
+  <li><a>About</a></li>
+  <li><a>Team</a></li>
+  <li><a>Contact</a></li>
+</ul>
+```
+Our menu still does nothing we can see yet, but we will come back to this after we create our page sections. 
+
+
+Creating Page Wrapper
+======
+
+The next step is to create a page wrapper, which "wraps" the content within its own section, aside from the menu and rest of the page. This is done by using division, or div, tags. Div tags need differentiation, so usually a class or id is attached to it to do this. They are functionally the same, but are used differently. IDs are only used once, while classes can be used more than once. Since we will ony have one page wrapper, an id is appropriate here. You will see the difference when you use classes later. To attach an id or class to a tag, simply type the type and value within the opening tag. You can name your ids and classes as you like, they just need to be consistent in CSS. Create a page wrapper div after the menu list with an id of "page-wrapper":
 
 ```html
 <html>
@@ -115,11 +129,10 @@ The next step is to create a page wrapper, which "wraps" the content within its 
   <body>
     <!-- creating a menu list -->
     <ul>
-      <li>Home</a>
-      <li>About</a>
-      <li>Team</a>
-      <li>Contact</a>
-      </li>
+      <li><a>Home</a></li>
+      <li><a>About</a></li>
+      <li><a>Team</a></li>
+      <li><a>Contact</a></li>
     </ul>
     <!-- creating wrapper for entire page -->
     <div id="page-wrapper">
@@ -127,6 +140,56 @@ The next step is to create a page wrapper, which "wraps" the content within its 
   </body>
 </html>
 ```
+
+Creating Page Sections
+======
+We are ready to create our page sections now. Our first section is the home section, so create a div with an id of "home" within the page wrapper div. Don't forget to properly indent and close your tags:
+```html
+<div id="page-wrapper">
+  <div id="home"></div>
+</div>
+```
+
+Let's finish creating our other sections while we're at it. Put space between each section so it is less confusing when building pages:
+```html
+<div id="page-wrapper">
+  <div id="home"></div>
+  
+  
+  <div id="about"></div>
+  
+  
+  <div id="team"></div>
+  
+  
+  <div id="contact"></div>
+</div>
+```
+
+Adding Page Section Content
+======
+Let's start adding to our section. Add headings using the h1 tag for each respective section. Your home section heading will simply be the name of your project:
+```html
+  <div id="home">
+    <h1>[Project Name]</h1>
+  </div>
+  
+  
+  <div id="about">
+    <h1>About</h1>
+  </div>
+  
+  
+  <div id="team">
+    <h1>Team</h1>
+  </div>
+  
+  
+  <div id="contact">
+    <h1>Contact</h1>
+  </div>
+```
+
 
 We need our list to stand out as a menu instead of a plain list, so we give it an "id" to do so. Simply type the word "id" within the opening ul tag and name it "top-menu". You can name it whatever you'd like, as long as it is consistent on th CSS side. We will use "top-menu" as the name here.
 ```html
@@ -139,6 +202,8 @@ We need our list to stand out as a menu instead of a plain list, so we give it a
       </li>
     </ul>
 ```
+
+
 We need to create individual sections within our wrapper for each page section, and we do this in a similar fashion. Because we have 4 page sections, we will be using a class for them instead of ids:
 
 

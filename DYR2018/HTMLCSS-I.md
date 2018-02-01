@@ -78,7 +78,7 @@ HTML tags are composed hierarchically. With our current code, we see that we hav
 </html>
 ```
 
-Now that we have a section to hold the code we can actually see, we can now start adding visual elements to the page. The first thing we should do is add our menu. A menu is simply a list of links, so we need to add list tags. Page menus aren't numbered, so we will use unordered list tags(<ul>). If we want numbered lists, we use ordered list(<ol>) tags. Our menu will have 4 links to start, so let's create it after the body tag, with each element enclosed within a list(<li>) tag. :
+Now that we have a section to hold the code we can actually see, we can now start adding visual elements to the page. The first thing we should do is add our menu. A menu is simply a list of links, so we need to add list tags. Page menus aren't numbered, so we will use unordered list tags(`<ul>`). If we want numbered lists, we use ordered list(`<ol>`) tags. Our menu will have 4 links to start, so let's create it after the body tag, with each element enclosed within a list(`<li>`) tag. :
 
 ```html
 <html>

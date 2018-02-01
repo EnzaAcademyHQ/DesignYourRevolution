@@ -1,5 +1,5 @@
 ---
-title: HTML & CSS I
+title: HTML & CSS II
 ---
 
 **Introduction:
@@ -30,6 +30,15 @@ We will make a change to the team member photo: giving it a 'img-thumbnail' clas
         <br><span class="team-member-name">[Member name]</span>
       </div>
       <!--...repeated for every team member-->
+```
+
+We will change our menu's background color. Since Bootstrap has default colors, we need to override it. We use the '!important' keyword to do this in CSS. We also need to add a z-index to make the menu appear in front of the rest of our page. Simply set this to a high value, and you should be safe. The value '9999' works:
+```css
+nav{
+  background-color: navy !important;
+  z-index: 9999;
+}
+
 ```
 
 We will be adding another advanced item to our page: a modal popup in the contact section. First we will start by adding the button:
@@ -81,6 +90,7 @@ The attributes aren't too important, as to how they work, just know they work. T
 Notice we added a contact form inside the modal. You can add whatever you'd like, but the form is a good start.
 
 Now that you are familiar with adding components with bootstrap, take this time to scroll through the bootstrap documentation and try adding at least 2 more components to your pages for practice. We recommend adding a dropdown menu, and an image carousel.
+
 
 
 Your HTML page should now look like this:

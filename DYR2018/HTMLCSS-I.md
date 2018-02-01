@@ -150,7 +150,7 @@ We are ready to create our page sections now. Our first section is the home sect
 </div>
 ```
 
-Let's finish creating our other sections while we're at it. Put space between each section so it is less confusing when building pages:
+Let's finish creating our other sections while we're at it. Put space between each section so it is less confusing when building pages. Add ids of the respective pages as well:
 ```html
 <div id="page-wrapper">
   <div id="home"></div>
@@ -190,222 +190,139 @@ Let's start adding to our section. Add headings using the h1 tag for each respec
   </div>
 ```
 
+Let's jump to the "team" section, because you will learn a new concept: adding images. Before we start, let's divide the team section into its own sub-sections. We will be adding a div for the "team members" row, and adding individual divs for each team member. 
 
-We need our list to stand out as a menu instead of a plain list, so we give it an "id" to do so. Simply type the word "id" within the opening ul tag and name it "top-menu". You can name it whatever you'd like, as long as it is consistent on th CSS side. We will use "top-menu" as the name here.
+Create the team member row, and add one team member inside the row:
+```html
+<div id="team">
+  <h1>Team</h1>
+    <div id="team-members">
+      <div class="team-member"></div>
+    </div>
+</div>
+```
+
+For the team member, this can be you. You will now add your image, name, and title. Images use 'img' tags, and we will give them all class names. Remember ids can only be used once, so that is why we will use class names for team members instead. Code inside the team member section:
+```html
+<div id="team">
+  <h1>Team</h1>
+    <div id="team-members">
+      <div class="team-member">
+         <img class="team-member-photo" />
+         <div class="team-member-title">Founder</div>
+         <div class="team-member-name">Mikos Jenkins</div>
+      </div>
+    </div>
+</div>
+```
+
+You currently have no image to show, so find either a random image on Google, and set this as your image. You will need to add a "src" property to the img tag with the image url:
+```html
+<img class="team-member-photo" src="[url of image]"/>
+```
+
+You should now see your image. These steps will be repeated for each member of your team, but we will do that later. Now that you understand how ids and classes work, we will make our menu clickable. We want each menu link to go to its respective page section, so we will reference each id. To make a link reference an id, we add a hashtag in front of the name of the id, and set the 'href' attribute of the 'a' tag to it. For example, to make a link referencing the "home" id, we add an 'href' attribute to the link's 'a' tag, and set it equal to '#home' like this:
+```html
+<a href="#home">Home</a>
+```
+
+Do this for all of your menu links, and it should be:
 ```html
     <!-- creating a menu list -->
-    <ul <mark>id="top-menu"</mark>>
-      <li>Home</a>
-      <li>About</a>
-      <li>Team</a>
-      <li>Contact</a>
-      </li>
+    <ul id="top-menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
 ```
 
+Your links are now clickable, but the page looks horrible. We will now use css to style the page!
 
-We need to create individual sections within our wrapper for each page section, and we do this in a similar fashion. Because we have 4 page sections, we will be using a class for them instead of ids:
+CSS
+======
+Slide out your css tab and begin adding code.  The first thing we'll style is the menu. We will give it a background color, a position, height, and width. CSS references ids the same way HTML does: hashtags. The format of CSS is element, curly braces, then styling rules. Your rules will be within open and closed curly braces {}. It will look like this:
 
-
-tell the user what they are looking at. We can accomplish this by using elements called headings. This is not to be confused with the head elements. One is for the anatomy of the HTML document itself, and the other is for a visual component within the body of the document.
-
-We will add a heading to our page telling the user the page will contain our quizzer tool. Heading tags are defined as `<h1>`. Did you notice the number after the letter? HTML has headings numbered up to 6 to indicate priority; the lower the number, the higher it is on the priority list. Try to experiment with headings in your editor space to see what each does:
-
-```html
-<h1>This is a heading 1</h1>
-<h2>This is a heading 2</h2>
-<h3>This is a heading 3</h3>
-<h4>This is a heading 4</h4>
-<h5>This is a heading 5</h5>
-<h6>This is a heading 6</h6>
-```
-You do not need to keep the experimental code -- the purpose was to demonstrate the differences in the headings. We will keep our level 1 heading, and give our quizzer tool a title the user can see. Add the following heading line within your `<body>` tags:
-
-```html
-<h1>Mikos's Awesome Quizzer Tool</h1>
-```
-We have added our first piece of data the user can see. We are now at:
-```html
-<html>
-<!-- I will be adding HTML elements here. -->
-
-  <!-- I will be adding a head tag. -->
-  <head>
-  
-    <!-- I will be adding a title tag. -->
-    <title>Mikos's Awesome Quizzer Tool</title>
-  </head>
-  
-  <!-- I will be adding a body tag. -->
-  <body>
-  
-    <!-- I will be adding an h1 tag for my quizzer's heading. -->
-    <h1>Mikos's Awesome Quizzer Tool</h1>
-  </body>
-</html>
-```
-The next thing we want to do is divide our HTML document into sections. First let's think about the sections we will need for our page:
-<ul>
-<li>A main section for our quiz</li>
-<li>A section for quiz feedback to display to the test-taker</li>
-</ul>
-
-How should we create these divisions in HTML? If you haven't guessed it yet, we have division tags for that:
-`<div></div>`
-
-We established earlier that we need 2 divisions for the page, meaning we will be creating 2 sets of div tags. Before we create the tags, let's make sense of where they should go. 
-
-If there is a main section in which the quiz-related content goes, and because the feedback is quiz-related, feedback should be within the main section. One set of div tags should be nested within the other:
-
-```html
-<div>
-  <div></div>
-</div>
+```css
+#top-menu{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: navy;
+  height: 25px;
+}
 ```
 
-Add this nested div section to your working code and it should appear as:
-```html
-<html>
-<!-- I will be adding HTML elements here. -->
-
-  <!-- I will be adding a head tag. -->
-  <head>
-  
-    <!-- I will be adding a title tag. -->
-    <title>Mikos's Awesome Quizzer Tool</title>
-  </head>
-  
-  <!-- I will be adding a body tag. -->
-  <body>
-  
-    <!-- I will be adding an h1 tag for my quizzer's heading. -->
-    <h1>Mikos's Awesome Quizzer Tool</h1>
-    
-    <!-- I will be adding a div tag for the main quiz section. -->
-    <div>
-    
-      <!-- I will be adding a div tag for quiz result feedback. -->
-      <div></div>
-    </div>
-  </body>
-</html>
+We need to make our links appear in a straight line, so add rules to do so. We will use nested rules, meaning we need to tell CSS these things are nested. We simply indicate the element we want to reference after its parent. For example, we have 'li' elements within the menu, and 'a' elements within that 'li'. Let's first tell CSS to display our links in a straight line:
+```css
+#top-menu li{
+  display: inline;
+}
 ```
 
-That makes sense, right? Sure, but the only problem is identifying which div is for what. This might not be a problem to leave it as is initially, but what if we want to specifically manipulate the feedback division without manipulating the main quiz division? We need a way to identify these divisions.
-
-We can do this by adding a property to the div elements themselves. This is done by defining the identifier(id) on the opening div tag itself:
-```html
-<div id="our_unique_identifier">
-
-</div>
+This is cool, but we need more space between links. Give it a left margin of 50px:
+```css
+#top-menu li{
+  margin-left: 50px;
+  display: inline;
+}
+```
+Now let's remove the underline and change the color of our links to white. Text-decoration removes the underline by setting the value to 'none':
+```css
+#top-menu li a{
+  text-decoration: none;
+  color: white;
+}
 ```
 
-Now that we know how to add identifiers, let's add them to our ambiguous `<div>` tags to get:
-```html
-<html>
-<!-- I will be adding HTML elements here. -->
-
-  <!-- I will be adding a head tag. -->
-  <head>
-  
-    <!-- I will be adding a title tag. -->
-    <title>Mikos's Awesome Quizzer Tool</title>
-  </head>
-  
-  <!-- I will be adding a body tag. -->
-  <body>
-  
-    <!-- I will be adding an h1 tag for my quizzer's heading. -->
-    <h1>Mikos's Awesome Quizzer Tool</h1>
-    
-    <!-- I will be adding a div tag for the main quiz section. -->
-    <div id="main_quiz_section">
-    
-      <!-- I will be adding a div tag for quiz result feedback. -->
-      <div id="quiz_result_feedback_section"></div>
-    </div>
-  </body>
-</html>
+Be sure to keep your CSS in order, so we will work backwards to add style to our page itself now. Let's make our text navy, centered, and change the font size. We will style the 'body' element:
+```css
+body{
+  color: navy;
+  font-size: 20px;
+  text-align: center;
+}
 ```
 
-We are almost done with our core HTML page, with only 2 items missing from our initial quizzer tool: a form for our questions, and a button to start the quizzer. 
-
-Yes, HTML has elements for forms and buttons! They follow the same convention as the other tags we've learned:
-`<form>` and `<button>` respectively. 
-
-We are using a form because the quiz is simply a form full of questions to be submitted. Where should the <form> go might you ask? We know it goes somewhere within the main quiz section, but should it go before or after the feedback?
-
-When you take a quiz, you will likely scroll to the bottom of the question list to submit your answers -- therefore it makes sense to place the form before the feedback section. This way, you will see the results feedback at the end of the quiz after it is submitted.
-
-Let's insert our `<form>` element before our feedback section:
-```html
-<html>
-<!-- I will be adding HTML elements here. -->
-
-  <!-- I will be adding a head tag. -->
-  <head>
-  
-    <!-- I will be adding a title tag. -->
-    <title>Mikos's Awesome Quizzer Tool</title>
-  </head>
-  
-  <!-- I will be adding a body tag. -->
-  <body>
-  
-    <!-- I will be adding an h1 tag for my quizzer's heading. -->
-    <h1>Mikos's Awesome Quizzer Tool</h1>
-    
-    <!-- I will be adding a div tag for the main quiz section. -->
-    <div id="main_quiz_section">
-    
-      <!-- I will be adding a form tag for quiz questions. -->
-      <form></form>
-      
-      <!-- I will be adding a div tag for quiz result feedback. -->
-      <div id="quiz_result_feedback_section"></div>
-    </div>
-  </body>
-</html>
+Let's make our page neater by giving it a fixed width, and reguired auto margins for the desired appearance:
+```css
+#page-wrapper{
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+}
 ```
 
-We will add an id property to our form so that we can identify its purpose:
-```html
-<html>
-<!-- I will be adding HTML elements here. -->
-
-  <!-- I will be adding a head tag. -->
-  <head>
-  
-    <!-- I will be adding a title tag. -->
-    <title>Mikos's Awesome Quizzer Tool</title>
-  </head>
-  
-  <!-- I will be adding a body tag. -->
-  <body>
-  
-    <!-- I will be adding an h1 tag for my quizzer's heading. -->
-    <h1>Mikos's Awesome Quizzer Tool</h1>
-    
-    <!-- I will be adding a div tag for the main quiz section. -->
-    <div id="main_quiz_section">
-    
-      <!-- I will be adding a form tag for quiz questions. -->
-      <form id="questions_form"></form>
-      
-      <!-- I will be adding a div tag for quiz result feedback. -->
-      <div id="quiz_result_feedback_section"></div>
-    </div>
-  </body>
-</html>
+Let's now make our headings navy, and add padding to the botton to create a cleaner look:
+```css
+h1{
+  color:navy;
+  margin-bottom: 50px;
+}
 ```
 
-Our last step for today will be adding the button to start the quiz. First, let's experiment with the way a button works by creating a couple of buttons:
+We will now style the remaining clsses. To style classes in CSS, use a dot(.) instead of the hashtag(#). Let's give our page sections a minimum height so they aren't cluttered together, and some padding to separate from our top menu:
+```css
+.page-section{
+  padding-top:50px;
+  min-height:500px;
+}
+```
 
-```html
-<button>Test Button 1</button>
-<button>Test Button 2</button>
-<button>Test Button 3</button>
-<button>Test Button 4</button>
+Go back and add one more team member, and we will style from there. We want our team members to display in a line, and give it margin spacing between each member of about 50px:
+```css
+.team-member{
+  display: inline-block;
+  margin-left: 50px;
+}
+```
+
+Finally, set your team member images' height and width for a more uniform look:
+```css
+.team-member-photo{
+  height: 100px;
+  width: 100px;
+}
 ```
 
 Your HTML page should now look like this:
@@ -420,11 +337,10 @@ Your HTML page should now look like this:
   <body>
     <!-- creating a menu list -->
     <ul id="top-menu">
-      <li><a href="#home">Home</a>
-      <li><a href="#about">About</a>
-      <li><a href="#team">Team</a>
-      <li><a href="#contact">Contact</a>
-      </li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
     <!-- creating wrapper for entire page -->
     <div id="page-wrapper">
@@ -497,9 +413,6 @@ h1{
 .page-section{
   padding-top:50px;
   min-height:500px;
-}
-.app-store-icons{
-  width: 200px;
 }
 .team-member{
   display: inline-block;

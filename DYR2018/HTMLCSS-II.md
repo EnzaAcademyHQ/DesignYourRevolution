@@ -1,5 +1,5 @@
 ---
-title: HTML & CSS II
+title: BLITZ CODING IN HTML & CSS II
 ---
 
 **Introduction:

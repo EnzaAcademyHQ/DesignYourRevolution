@@ -89,10 +89,6 @@ The attributes aren't too important, as to how they work, just know they work. T
 
 Notice we added a contact form inside the modal. You can add whatever you'd like, but the form is a good start.
 
-Now that you are familiar with adding components with bootstrap, take this time to scroll through the bootstrap documentation and try adding at least 2 more components to your pages for practice. We recommend adding a dropdown menu, and an image carousel.
-
-
-
 Your HTML page should now look like this:
 
 ```html
@@ -235,6 +231,8 @@ nav a{
   width: 100px;
 }
 ```
+
+Now that you are familiar with adding components with bootstrap, take this time to scroll through the bootstrap documentation and try adding at least 2 more components to your pages for practice. We recommend adding a dropdown menu, and an image carousel.
 
 Feel free to Google concepts that you either you are having trouble with, or desire to learn more information about. A great website to use to learn more about the topics discussed in class:<br>
 **https://www.w3schools.com/**

@@ -13,6 +13,11 @@ Think of this: in chemistry, matter is composed of elements. Every piece of matt
 
 Just as every element on the periodic table has properties that make them unique, the same can be said about HTML elements. 
 
+Create a codepen account at www.codepen.io , and create a new pen. We will start by using the code from the previous lab(scroll down to the end of the list and paste into your pens).
+
+HTML Tab
+======
+
 Every HTML page has encapsulating tags; meaning that the tag begins, content is added within the tag, and the tag is closed off with a matching tag. For example, every HTML page has "master" HTML tags, with an opening `<html>` tag, and ending with a closing `</html>` tag. The tags are simply composed of: a less-than sign, the name of the tag, and a greater-than sign. The HTML tag simply has 'html' between the less-than & greater-than signs as its tag. This is how the interpreter knows the document is HTML.
 
 ```html
@@ -241,7 +246,7 @@ Do this for all of your menu links, and it should be:
 
 Your links are now clickable, but the page looks horrible. We will now use css to style the page!
 
-CSS
+CSS Tab
 ======
 Slide out your css tab and begin adding code.  The first thing we'll style is the menu. We will give it a background color, a position, height, and width. CSS references ids the same way HTML does: hashtags. The format of CSS is element, curly braces, then styling rules. Your rules will be within open and closed curly braces {}. It will look like this:
 

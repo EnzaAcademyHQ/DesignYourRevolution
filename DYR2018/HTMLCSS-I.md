@@ -7,13 +7,14 @@ Blitz Coding with Enza: HTML/CSS I
 **Introduction:
 We will learn basic HTML & CSS to create a basic landing page for your project. We will dissect the components of an HTML page, discussing different elements & tags.**
 
+Open a new browser session, preferably Chrome. Create a codepen account at www.codepen.io , and create a new pen. 
+
 HTML pages are documents comprised of components called "elements". Every HTML page has elements. 
 
 Think of this: in chemistry, matter is composed of elements. Every piece of matter contains elements from the periodic table. You can view web page elements as exhibiting the same functionality.
 
 Just as every element on the periodic table has properties that make them unique, the same can be said about HTML elements. 
 
-Create a codepen account at www.codepen.io , and create a new pen. We will start by using the code from the previous lab(scroll down to the end of the list and paste into your pens).
 
 HTML Tab
 ======
@@ -197,7 +198,15 @@ Let's start adding to our section. Add headings using the h1 tag for each respec
   </div>
 ```
 
-Let's jump to the "team" section, because you will learn a new concept: adding images. Before we start, let's divide the team section into its own sub-sections. We will be adding a div for the "team members" row, and adding individual divs for each team member. 
+We will learn how to add images that will eventually be our logo. Open a new tab, and quickly find an image in a Google search, this will be replaced later. Right-click or Ctrl-click(Macs) and click "Copy Image Url" or "Copy Image Address", depending on your browser.
+
+Go back to your codepen, and add an img tag after the home section. We will be pasting the image url onto the "src" attribute to the img tag, and give it an id of "home-logo":
+
+```html
+<img src="[image url]" id="home-logo" />
+```
+
+Let's jump to the "team" section. Before we start, let's divide the team section into its own sub-sections. We will be adding a div for the "team members" row, and adding individual divs for each team member. 
 
 Create the team member row, and add one team member inside the row:
 ```html
@@ -209,7 +218,7 @@ Create the team member row, and add one team member inside the row:
 </div>
 ```
 
-For the team member, this can be you. You will now add your image, name, and title. Images use 'img' tags, and we will give them all class names. Remember ids can only be used once, so that is why we will use class names for team members instead. Code inside the team member section:
+For the team member, this can be you. You will now add an image, name, and title. We will give our images class names. Remember ids can only be used once, so that is why we will use class names for team members instead. Code inside the team member section:
 ```html
 <div id="team">
   <h1>Team</h1>
@@ -223,7 +232,7 @@ For the team member, this can be you. You will now add your image, name, and tit
 </div>
 ```
 
-You currently have no image to show, so find either a random image on Google, and set this as your image. You will need to add a "src" property to the img tag with the image url:
+Find a random image on Google, and set this as your image. Do this the same way we added the previous image:
 ```html
 <img class="team-member-photo" src="[url of image]"/>
 ```
@@ -285,7 +294,7 @@ Now let's remove the underline and change the color of our links to white. Text-
 Be sure to keep your CSS in order, so we will work backwards to add style to our page itself now. Let's make our text navy, centered, and change the font size. We will style the 'body' element:
 ```css
 body{
-  color: navy;
+  color: green;
   font-size: 20px;
   text-align: center;
 }
@@ -310,7 +319,7 @@ To see separation in the pages, for every other section, add a background color.
   background-color: #bfbfbf;
 }
 ```
-Hex colors start with a hashtag, followed by a 6-digit hexadecimal number. You doncan't memorize all of these, so usually a chart is used. Here is a link to a very useful chart:
+Hex colors start with a hashtag, followed by a 6-digit hexadecimal number. You can't memorize all of these, so usually a chart is used. Here is a link to a very useful chart:
 
 http://www.2createawebsite.com/build/hex-colors.html
 
@@ -322,7 +331,7 @@ h1{
 }
 ```
 
-We will now style the remaining clsases. To style classes in CSS, use a dot(.) instead of the hashtag(#). Let's give our page sections a minimum height so they aren't cluttered together, and some padding to separate from our top menu:
+We will now style the remaining classes. To style classes in CSS, use a dot(.) instead of the hashtag(#). Let's give our page sections a minimum height so they aren't cluttered together, and some padding to separate from our top menu:
 ```css
 .page-section{
   padding-top:50px;
@@ -330,7 +339,7 @@ We will now style the remaining clsases. To style classes in CSS, use a dot(.) i
 }
 ```
 
-Go back and add one more team member, and we will style from there. We want our team members to display in a line, and give it margin spacing between each member of about 50px:
+Go back and add one more team member by simply copy & pasting the current team member, and we will style from there. We want our team members to display in a line, and give it margin spacing between each member of about 50px:
 ```css
 .team-member{
   display: inline-block;
@@ -378,7 +387,7 @@ Your HTML page should now look like this:
       <!-- creating divs for each page section -->
       <div id="home" class="page-section">
         <h1>[Project name]</h1>
-        <img src="https://calendarmedia.blob.core.windows.net/assets/1d58fcb6-fee1-4dce-8725-4656e39cb979.png" id="home-logo" />
+        <img src="[image url]" id="home-logo" />
         <p>[Project information & where app will be located]</p>
       </div>
       <div id="about" class="page-section">

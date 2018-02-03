@@ -111,6 +111,7 @@ Your HTML page should now look like this:
     <div id="page-wrapper">
     <div id="home" class="page-section">
       <h1>TutorFinder</h1>
+      <img src="https://calendarmedia.blob.core.windows.net/assets/1d58fcb6-fee1-4dce-8725-4656e39cb979.png" id="home-logo" />
       <p>We see a need to build a platform to unite classrooms by connecting the strongest students in class with the students that need extra help.</p>
       <br>
       <p>Stay tuned for our web & mobile app launch!</p>
@@ -190,29 +191,15 @@ Your CSS side should now look like:
   margin: 0;
 }
 body{
-  background: teal;
-  color: white;
+  color: green !important;
   font-size: 20px;
-  text-align: center;
-}
-nav{
-  background-color: navy !important;
-  z-index: 9999;
-}
-#page-wrapper{
-  margin-left: auto;
-  margin-right: auto;
-  width: 960px;
-}
-h1{
-  color:white;
-  margin-bottom: 50px;
+  text-align: center !important;
 }
 nav{
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: black;
+  background-color: green;
   height: 40px;
 }
 nav a{
@@ -221,6 +208,23 @@ nav a{
 .page-section{
   padding-top:50px;
   min-height:500px;
+}
+#home-logo{
+  height: 100px;
+}
+#page-wrapper{
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+}
+h1{
+  margin-bottom: 50px;
+}
+#about{
+  background-color: #bfbfbf;
+}
+#contact{
+  background-color: #bfbfbf;
 }
 .team-member{
   display: inline-block;

@@ -2,6 +2,8 @@
 title: HTML & CSS I
 ---
 
+Blitz Coding with Enza: HTML & CSS I
+======
 **Introduction:
 We will learn basic HTML & CSS to create a basic landing page for your project. We will dissect the components of an HTML page, discussing different elements & tags.**
 
@@ -293,15 +295,29 @@ Let's make our page neater by giving it a fixed width, and reguired auto margins
 }
 ```
 
-Let's now make our headings navy, and add padding to the botton to create a cleaner look:
+To see separation in the pages, for every other section, add a background color. In our case, the about and contact pages are going to be the offsets. We will keep it simple by adding a light gray color. Instead of typing "light gray", we will use denote the color using a code. Pay close attention:
+
+```css
+#about{
+  background-color: #bfbfbf;
+}
+#contact{
+  background-color: #bfbfbf;
+}
+```
+Hex colors start with a hashtag, followed by a 6-digit hexadecimal number. You doncan't memorize all of these, so usually a chart is used. Here is a link to a very useful chart:
+
+http://www.2createawebsite.com/build/hex-colors.html
+
+
+Now add padding to the bottom of our headings to create a cleaner look:
 ```css
 h1{
-  color:navy;
   margin-bottom: 50px;
 }
 ```
 
-We will now style the remaining clsses. To style classes in CSS, use a dot(.) instead of the hashtag(#). Let's give our page sections a minimum height so they aren't cluttered together, and some padding to separate from our top menu:
+We will now style the remaining clsases. To style classes in CSS, use a dot(.) instead of the hashtag(#). Let's give our page sections a minimum height so they aren't cluttered together, and some padding to separate from our top menu:
 ```css
 .page-section{
   padding-top:50px;
@@ -317,13 +333,23 @@ Go back and add one more team member, and we will style from there. We want our 
 }
 ```
 
-Finally, set your team member images' height and width for a more uniform look:
+Set your team member images' height and width for a more uniform look:
 ```css
 .team-member-photo{
   height: 100px;
   width: 100px;
 }
 ```
+
+Finally, go back and remove the annoying border around your page with this magic CSS code(add this to the top of your CSS file):
+```css
+*{
+  padding:0;
+  margin: 0;
+}
+```
+
+The asterisk(```*```) is a symbol commonly used to denote "all".
 
 Your HTML page should now look like this:
 
@@ -383,23 +409,16 @@ Your CSS side should now look like:
   margin: 0;
 }
 body{
-  background: teal;
-  color: white;
+  color: navy;
   font-size: 20px;
-}
-#page-wrapper{
-  margin-left: auto;
-  margin-right: auto;
-  width: 960px;
-}
-h1{
-  color:white;
+  text-align: center;
+  background: #efefef;
 }
 #top-menu{
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: black;
+  background-color: navy;
   height: 25px;
 }
 #top-menu li{
@@ -410,9 +429,23 @@ h1{
   text-decoration: none;
   color: white;
 }
+#page-wrapper{
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+}
+h1{
+  margin-bottom: 50px;
+}
 .page-section{
   padding-top:50px;
   min-height:500px;
+}
+#about{
+  background-color: #bfbfbf;
+}
+#contact{
+  background-color: #bfbfbf;
 }
 .team-member{
   display: inline-block;

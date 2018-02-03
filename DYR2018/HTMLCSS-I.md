@@ -218,15 +218,15 @@ Create the team member row, and add one team member inside the row:
 </div>
 ```
 
-For the team member, this can be you. You will now add an image, name, and title. We will give our images class names. Remember ids can only be used once, so that is why we will use class names for team members instead. Code inside the team member section:
+For the team member, this can be you. You will now add an image, name, and title. We will give our images class names. Remember ids can only be used once, so that is why we will use class names for team members instead. We have data that will contain only words or single lines of text(name & title), so 'span' tags are used for that instead of divs. Code inside the team member section:
 ```html
 <div id="team">
   <h1>Team</h1>
     <div id="team-members">
       <div class="team-member">
          <img class="team-member-photo" />
-         <div class="team-member-title">Founder</div>
-         <div class="team-member-name">Mikos Jenkins</div>
+         <span class="team-member-title">Founder</span>
+         <span class="team-member-name">Mikos Jenkins</span>
       </div>
     </div>
 </div>

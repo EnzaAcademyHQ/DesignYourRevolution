@@ -8,7 +8,10 @@ Blitz Coding with Enza: HTML/CSS II
 **Introduction:
 We will learn use what we know about HTML and CSS to add the framework bootstrap**
 
-Create a codepen account at www.codepen.io , and create a new pen. We will start by using the code from the previous lab(scroll down to the end of the list and paste into your pens).
+Create a codepen account at www.codepen.io , and create a new pen. We will start by using the code from the previous lab. Get it here:
+https://enza-academy.github.io/DYR2018/HTMLCSS-II
+
+Scroll down to the end of the list and paste into your pens -- HTML into the HTML tab and CSS into the CSS tab.
 
 Open the Bootstrap documentation in a new tab:
 https://getbootstrap.com/

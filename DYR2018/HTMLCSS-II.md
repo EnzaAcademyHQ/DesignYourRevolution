@@ -38,13 +38,29 @@ We will make a change to the team member photo: giving it a 'img-thumbnail' clas
       <!--...repeated for every team member-->
 ```
 
-We will change our menu's background color. Since Bootstrap has default colors, we need to override it. We use the '!important' keyword to do this in CSS. We also need to add a z-index to make the menu appear in front of the rest of our page. Simply set this to a high value, and you should be safe. The value '9999' works:
+We will change our menu's from a ul to a 'nav'. Doing this makes our menu Bootstrap-friendly since 'nav' elements are built into bootstrap. We will also remove the `<li>` elements from the links since it is now a nav and not a list. Your CSS rules will remain the same, we just need to update them to accomodate the new element. Styles from `#top-menu` become styles for `nav`:
 ```css
 nav{
-  background-color: navy !important;
-  z-index: 9999;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: green;
+  height: 40px;
 }
+nav a{
+  color: white;
+}
+```
 
+We don't need the `#top-menu li` rules either, so remove it completely. Notice we also removed the `li` from the `nav a` rules, and the `text-decoration` rule too because it's no longer needed.
+
+Since Bootstrap has default text colors, we need to override them. We use the '!important' keyword to do this in CSS. Do this for the `body` rules to ensure the text is green and centered:
+```css
+body{
+  color: green !important;
+  font-size: 20px;
+  text-align: center !important;
+}
 ```
 
 We will be adding another advanced item to our page: a modal popup in the contact section. First we will start by adding the button:

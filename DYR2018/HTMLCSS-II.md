@@ -8,13 +8,13 @@ Blitz Coding with Enza: HTML/CSS II
 **Introduction:
 We will learn use what we know about HTML and CSS to add the framework bootstrap**
 
+Create a codepen account at www.codepen.io , and create a new pen. We will start by using the code from the previous lab(scroll down to the end of the list and paste into your pens).
 
-Use the Bootstrap reference throughout this lab as a guide:
+Open the Bootstrap documentation in a new tab:
 https://getbootstrap.com/
 
-Click "documentation" at the top of the page, then click "components" on the left menu.
+Click "documentation" at the top of the page, and use this to guide you throughout the rest of the lab.
 
-Start by using the code from the previous lab(scroll down to the end of the list and paste into your pens).
 Include bootstrap within your head tags:
 
 ```html
@@ -26,6 +26,8 @@ Include bootstrap within your head tags:
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 ```
+
+You will immediately notice a difference in the style of the page after you add these lines.
 
 We will make a change to the team member photo: giving it a 'img-thumbnail' class to add the border as in bootstrap.
 ```html

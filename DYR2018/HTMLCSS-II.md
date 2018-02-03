@@ -43,7 +43,27 @@ We will make a change to the team member photo: giving it a 'img-thumbnail' clas
       <!--...repeated for every team member-->
 ```
 
-We will change our menu's from a ul to a 'nav'. Doing this makes our menu Bootstrap-friendly since 'nav' elements are built into bootstrap. We will also remove the `<li>` elements from the links since it is now a nav and not a list. Your CSS rules will remain the same, we just need to update them to accomodate the new element. Styles from `#top-menu` become styles for `nav`:
+We will change our menu's from a ul to a 'nav', and give it a "nav" class. Doing this makes our menu Bootstrap-friendly since 'nav' elements are built into bootstrap. We will also remove the `<li>` elements from the links since it is now a nav and not a list. Your HTML should now be:
+```html
+<nav class="nav">
+    <a class="nav-link" href="#home">Home</a>
+    <a class="nav-link" href="#about">About</a>
+    <a class="nav-link" href="#team">Team</a>
+    <a class="nav-link" href="#contact">Contact</a>
+</nav>
+```
+
+Center the menu by adding the Bootstrap built-in "justify-content-center" class to it:
+```html
+<nav class="nav justify-content-center">
+    <a class="nav-link" href="#home">Home</a>
+    <a class="nav-link" href="#about">About</a>
+    <a class="nav-link" href="#team">Team</a>
+    <a class="nav-link" href="#contact">Contact</a>
+</nav>
+```
+
+Your CSS rules will remain the same, we just need to update them to accomodate the new element. Styles from `#top-menu` become styles for `nav`:
 ```css
 nav{
   position: fixed;
@@ -68,14 +88,14 @@ body{
 }
 ```
 
-We will be adding another advanced item to our page: a modal popup in the contact section. First we will start by adding the button:
+We will be adding an advanced item to our page: a modal popup in the contact section. It functions with a programming language called JavaScript. First we will start by adding the button:
 ```html
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactModal">
   Give us a shout!
 </button>
 ```
-The attributes aren't too important, as to how they work, just know they work. The important thing is to remember the 'data-target' attribute, because this is what makes the modal appear. We haven't created the modal yet, but we will do so now:
+The attributes aren't too important, as to how they work, just know they work. The important thing is to remember the 'data-target' attribute, because this is what makes the modal appear. We haven't created the modal yet, but we will do so now. Paste the following code AFTER the button code:
 
 ```html
 <!-- Modal -->

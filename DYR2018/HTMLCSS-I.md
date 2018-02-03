@@ -373,6 +373,7 @@ Your HTML page should now look like this:
       <!-- creating divs for each page section -->
       <div id="home" class="page-section">
         <h1>[Project name]</h1>
+        <img src="https://calendarmedia.blob.core.windows.net/assets/1d58fcb6-fee1-4dce-8725-4656e39cb979.png" id="home-logo" />
         <p>[Project information & where app will be located]</p>
       </div>
       <div id="about" class="page-section">
@@ -409,7 +410,7 @@ Your CSS side should now look like:
   margin: 0;
 }
 body{
-  color: navy;
+  color: green;
   font-size: 20px;
   text-align: center;
   background: #efefef;
@@ -418,7 +419,7 @@ body{
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: navy;
+  background-color: green;
   height: 25px;
 }
 #top-menu li{
@@ -429,6 +430,9 @@ body{
   text-decoration: none;
   color: white;
 }
+#home-logo{
+  height: 100px;
+}
 #page-wrapper{
   margin-left: auto;
   margin-right: auto;
@@ -437,6 +441,7 @@ body{
 h1{
   margin-bottom: 50px;
 }
+
 .page-section{
   padding-top:50px;
   min-height:500px;

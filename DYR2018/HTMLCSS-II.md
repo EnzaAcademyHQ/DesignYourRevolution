@@ -2,11 +2,17 @@
 title: BLITZ CODING IN HTML & CSS II
 ---
 
+Blitz Coding with Enza: HTML/CSS II
+======
+
 **Introduction:
 We will learn use what we know about HTML and CSS to add the framework bootstrap**
 
+
 Use the Bootstrap reference throughout this lab as a guide:
 https://getbootstrap.com/
+
+Click "documentation" at the top of the page, then click "components" on the left menu.
 
 Start by using the code from the previous lab(scroll down to the end of the list and paste into your pens).
 Include bootstrap within your head tags:

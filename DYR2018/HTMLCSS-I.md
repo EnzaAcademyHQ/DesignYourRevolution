@@ -1,6 +1,4 @@
----
-title: HTML & CSS I
----
+## Title: HTML & CSS I
 
 Blitz Coding with Enza: HTML/CSS I
 ======
